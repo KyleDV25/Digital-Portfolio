@@ -49,12 +49,16 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
     if (aboutImg) {
       gsap.fromTo(
         aboutImg,
-        { clipPath: "inset(100% 0 0 0)" },
+        { opacity: 0, y: 30 },
         {
-          clipPath: "inset(0% 0 0 0)",
+          opacity: 1,
+          y: 0,
           duration: 1.2,
           ease: "power4.inOut",
-          scrollTrigger: { trigger: aboutImg, start: "top 75%" },
+          scrollTrigger: { 
+            trigger: aboutImg, 
+            start: "top 80%",
+          },
         }
       );
     }
