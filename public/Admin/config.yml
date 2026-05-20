@@ -28,13 +28,13 @@ collections:
               - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
               - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
               - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
-              - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+              - { label: "Hero Image", name: "heroImage", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically." }
           - label: "About Section"
             name: "aboutSection"
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image", name: "image", widget: "image", hint: "Upload image. The CMS will handle the path automatically." }
               - { label: "Summary", name: "summary", widget: "text", required: false }
               - label: "Stats"
                 name: "stats"
@@ -79,8 +79,8 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
               - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
-              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
-          - { label: "Profile Image", name: "profileImage", widget: "image" }
+              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "plasma" }
+          - { label: "Profile Image", name: "profileImage", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically." }
           - label: "Bio Sections"
             name: "bio"
             widget: "list"
@@ -186,7 +186,7 @@ collections:
         fields:
           - { label: "Label", name: "label", widget: "string", hint: "Shown on cards and articles." }
           - { label: "Filter Value", name: "value", widget: "string", hint: "Matches the filter value in site settings, for example graphic-design or coding." }
-      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false, hint: "Falls back to the first gallery image if left empty." }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically. Falls back to the first gallery image if left empty." }
       - label: "Keywords"
         name: "keywords"
         widget: "list"
@@ -222,10 +222,10 @@ collections:
         hint: "Supports images and self-hosted video files."
         fields:
           - { label: "Media Type", name: "type", widget: "select", options: ["image", "video"], default: "image" }
-          - { label: "Image", name: "image", widget: "image", required: false }
+          - { label: "Image", name: "image", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically." }
           - { label: "Video File", name: "video", widget: "file", required: false, hint: "Upload an MP4, WebM, or Ogg file for the custom player." }
           - { label: "External Video URL", name: "videoUrl", widget: "string", required: false, hint: "Optional direct video file URL if the video is hosted elsewhere." }
-          - { label: "Poster Image", name: "posterImage", widget: "image", required: false }
+          - { label: "Poster Image", name: "posterImage", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically." }
           - { label: "Caption", name: "caption", widget: "string", required: false }
           - { label: "Alt Text", name: "altText", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown", hint: "Main article content. Use markdown for headings, lists, and inline images." }
@@ -244,13 +244,27 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
-      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
+      - { label: "Featured Image", name: "featuredImage", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically." }
       - { label: "Excerpt", name: "excerpt", widget: "text" }
       - label: "Tags"
         name: "tags"
         widget: "list"
         required: false
         field: { label: "Tag", name: "tag", widget: "string" }
+      - label: "Media Gallery"
+        name: "mediaGallery"
+        widget: "list"
+        required: false
+        collapsed: true
+        hint: "Supports images and self-hosted video files."
+        fields:
+          - { label: "Media Type", name: "type", widget: "select", options: ["image", "video"], default: "image" }
+          - { label: "Image", name: "image", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically." }
+          - { label: "Video File", name: "video", widget: "file", required: false, hint: "Upload an MP4, WebM, or Ogg file for the custom player." }
+          - { label: "External Video URL", name: "videoUrl", widget: "string", required: false, hint: "Optional direct video file URL if the video is hosted elsewhere." }
+          - { label: "Poster Image", name: "posterImage", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically." }
+          - { label: "Caption", name: "caption", widget: "string", required: false }
+          - { label: "Alt Text", name: "altText", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "galleries"
@@ -270,7 +284,7 @@ collections:
         name: "images"
         widget: "list"
         fields:
-          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Image", name: "image", widget: "image", hint: "Upload image. The CMS will handle the path automatically." }
           - { label: "Alt Text", name: "altText", widget: "string" }
           - { label: "Caption", name: "caption", widget: "string", required: false }
 
