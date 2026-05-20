@@ -26,6 +26,31 @@ collections:
             widget: "list"
             field: { label: "Project Slug", name: "slug", widget: "string" }
 
+  - name: "about"
+    label: "About Page"
+    files:
+      - file: "content/about.json"
+        label: "About Content"
+        name: "about"
+        fields:
+          - { label: "Greeting", name: "greeting", widget: "string" }
+          - { label: "Name", name: "name", widget: "string" }
+          - label: "Bio Sections"
+            name: "bio"
+            widget: "list"
+            field: { label: "Bio Text (Markdown supported)", name: "text", widget: "markdown" }
+          - { label: "CTA", name: "cta", widget: "string" }
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            fields:
+              - { label: "Creative Icon", name: "creative_icon", widget: "string" }
+              - { label: "Coding Icon", name: "coding_icon", widget: "string" }
+              - { label: "Creative Title", name: "creative_title", widget: "string" }
+              - { label: "Coding Title", name: "coding_title", widget: "string" }
+              - { label: "Creative Description", name: "creative_desc", widget: "string" }
+              - { label: "Coding Description", name: "coding_desc", widget: "string" }
+
   - name: "projects"
     label: "Projects"
     label_singular: "Project"
@@ -115,46 +140,6 @@ collections:
         field: { label: "Tag", name: "tag", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-  - name: "store"
-    label: "Store / Merch"
-    folder: "content/store"
-    create: true
-    delete: true
-    slug: "{{slug}}"
-    format: "json"
-    extension: "json"
-    identifier_field: "title"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Store URL", name: "href", widget: "string" }
-      - { label: "Price", name: "price", widget: "string", required: false }
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
-        required: false
-        field: { label: "Tag", name: "tag", widget: "string" }
-
-  - name: "commissions"
-    label: "Commission Services"
-    folder: "content/commissions"
-    create: true
-    delete: true
-    slug: "{{slug}}"
-    format: "json"
-    extension: "json"
-    identifier_field: "title"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Price", name: "price", widget: "string" }
-      - { label: "Turnaround", name: "turnaround", widget: "string" }
-      - label: "Includes"
-        name: "includes"
-        widget: "list"
-        field: { label: "Included Item", name: "item", widget: "string" }
-
   - name: "galleries"
     label: "Artwork Galleries"
     folder: "content/galleries"
@@ -175,6 +160,48 @@ collections:
           - { label: "Image", name: "image", widget: "image" }
           - { label: "Alt Text", name: "altText", widget: "string" }
           - { label: "Caption", name: "caption", widget: "string", required: false }
+
+  - name: "skills"
+    label: "Skills"
+    files:
+      - file: "content/coding_skills.json"
+        label: "Coding Skills"
+        name: "coding_skills"
+        fields:
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Skill ID", name: "skill_id", widget: "string" }
+      - file: "content/creative_skills.json"
+        label: "Creative Skills"
+        name: "creative_skills"
+        fields:
+          - label: "Skills"
+            name: "skills"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "Skill ID", name: "skill_id", widget: "string" }
+
+  - name: "social"
+    label: "Social Links"
+    files:
+      - file: "content/social_links.json"
+        label: "Social Links"
+        name: "social_links"
+        fields:
+          - label: "Links"
+            name: "links"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+              - { label: "Order", name: "order", widget: "number" }
 
   - name: "settings"
     label: "Settings"
