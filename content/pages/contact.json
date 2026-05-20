@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "CONTACT",
+    "eyebrow": "Get in Touch",
+    "backgroundType": "pattern",
+    "background": "#BF00FF",
+    "accent": "plasma"
+  },
+  "email": "kyledevares025@gmail.com",
+  "availability": "Available for freelance projects",
+  "details": [
+    {
+      "label": "Email",
+      "value": "kyledevares025@gmail.com",
+      "icon": "📧"
+    },
+    {
+      "label": "Location",
+      "value": "Jersey, Channel Islands",
+      "icon": "📍"
+    }
+  ]
+}

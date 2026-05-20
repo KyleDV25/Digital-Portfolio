@@ -1,0 +1,11 @@
+{
+  "hero": {
+    "title": "JOURNAL",
+    "eyebrow": "Blog",
+    "backgroundType": "pattern",
+    "background": "#BF00FF",
+    "accent": "plasma"
+  },
+  "pageTitle": "Journal",
+  "pageDescription": "Thoughts, tutorials, and insights from the digital frontier."
+}

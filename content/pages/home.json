@@ -1,0 +1,16 @@
+{
+  "hero": {
+    "title": "DIGITAL",
+    "subtitle": "ARTIST",
+    "eyebrow": "Kyle De Vares",
+    "backgroundType": "pattern",
+    "background": "#CAFF00",
+    "accent": "volt"
+  },
+  "featuredSection": {
+    "title": "Featured Work",
+    "description": "A selection of recent projects showcasing digital art, web development, and creative problem-solving.",
+    "ctaLabel": "View All Projects",
+    "ctaLink": "/portfolio"
+  }
+}
