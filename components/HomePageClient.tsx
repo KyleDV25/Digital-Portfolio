@@ -45,6 +45,23 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
       });
     }
 
+    const aboutImg = aboutImgRef.current;
+    if (aboutImg) {
+      gsap.fromTo(
+        aboutImg,
+        { opacity: 0, scale: 0.95 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: aboutImg,
+            start: "top 85%",
+          },
+        }
+      );
+    }
 
     const counters = document.querySelectorAll("[data-count]");
     counters.forEach((el) => {
