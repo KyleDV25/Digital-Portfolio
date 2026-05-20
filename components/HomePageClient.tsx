@@ -152,7 +152,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
         <div className="container-punk">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div ref={aboutImgRef} className="relative aspect-[3/4] overflow-hidden order-2 lg:order-1">
-              <Image src={pageConfig.aboutSection.image || "/assets/uploads/redesign.png"} alt="Kyle De Vares design work" fill className="object-cover grayscale contrast-125" />
+              <Image src={pageConfig.aboutSection.image ? `/assets/uploads/${pageConfig.aboutSection.image}` : "/assets/uploads/redesign.png"} alt="Kyle De Vares design work" fill className="object-cover grayscale contrast-125" />
               <div className="absolute inset-0 bg-plasma/10 mix-blend-color" />
             </div>
 

@@ -11,34 +11,13 @@ media_folder: "assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
-  - name: "homepage"
-    label: "Homepage"
+  - name: "pages"
+    label: "Page Content"
     files:
-      - file: "content/homepage.json"
-        label: "Homepage Featured Content"
-        name: "homepage"
-        fields:
-          - { label: "Hero Eyebrow", name: "heroEyebrow", widget: "string" }
-          - { label: "Hero Headline", name: "heroHeadline", widget: "string" }
-          - { label: "Hero Statement", name: "heroStatement", widget: "text" }
-          - label: "Featured Project Slugs"
-            name: "featuredProjects"
-            widget: "list"
-            field: { label: "Project Slug", name: "slug", widget: "string" }
       - file: "content/pages/home.json"
-        label: "Homepage Page Configuration"
-        name: "home_page"
+        label: "Homepage"
+        name: "home"
         fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Subtitle", name: "subtitle", widget: "string" }
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
-              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
-              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
           - label: "About Section"
             name: "aboutSection"
             widget: "object"
@@ -75,34 +54,9 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "CTA Label", name: "ctaLabel", widget: "string" }
-
-  - name: "about"
-    label: "About Page"
-    files:
-      - file: "content/about.json"
-        label: "About Content"
-        name: "about"
-        fields:
-          - { label: "Greeting", name: "greeting", widget: "string" }
-          - { label: "Name", name: "name", widget: "string" }
-          - label: "Bio Sections"
-            name: "bio"
-            widget: "list"
-            field: { label: "Bio Text (Markdown supported)", name: "text", widget: "markdown" }
-          - { label: "CTA", name: "cta", widget: "string" }
-          - label: "Highlights"
-            name: "highlights"
-            widget: "list"
-            fields:
-              - { label: "Creative Icon", name: "creative_icon", widget: "string" }
-              - { label: "Coding Icon", name: "coding_icon", widget: "string" }
-              - { label: "Creative Title", name: "creative_title", widget: "string" }
-              - { label: "Coding Title", name: "coding_title", widget: "string" }
-              - { label: "Creative Description", name: "creative_desc", widget: "string" }
-              - { label: "Coding Description", name: "coding_desc", widget: "string" }
       - file: "content/pages/about.json"
-        label: "About Page Configuration"
-        name: "about_page"
+        label: "About Page"
+        name: "about"
         fields:
           - label: "Page Hero"
             name: "hero"
@@ -114,7 +68,7 @@ collections:
               - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
               - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
               - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
-          - { label: "Profile Image", name: "profileImage", widget: "image", required: false }
+          - { label: "Profile Image", name: "profileImage", widget: "image" }
           - label: "Tags"
             name: "tags"
             widget: "list"
@@ -136,6 +90,87 @@ collections:
             name: "marqueeItems"
             widget: "list"
             field: { label: "Item", name: "item", widget: "string" }
+      - file: "content/pages/portfolio.json"
+        label: "Portfolio Page"
+        name: "portfolio"
+        fields:
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
+              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
+              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "plasma" }
+          - label: "Built From Real Work Section"
+            name: "builtFromRealWork"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+      - file: "content/pages/blog.json"
+        label: "Blog Page"
+        name: "blog"
+        fields:
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
+              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
+              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Page Description", name: "pageDescription", widget: "text" }
+      - file: "content/pages/contact.json"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
+              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
+              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "plasma" }
+          - { label: "Email", name: "email", widget: "string" }
+          - { label: "Availability Status", name: "availability", widget: "string" }
+          - label: "Contact Details"
+            name: "details"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Value", name: "value", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string" }
+
+  - name: "about"
+    label: "About Content"
+    files:
+      - file: "content/about.json"
+        label: "About Bio"
+        name: "about_bio"
+        fields:
+          - { label: "Greeting", name: "greeting", widget: "string" }
+          - { label: "Name", name: "name", widget: "string" }
+          - label: "Bio Sections"
+            name: "bio"
+            widget: "list"
+            field: { label: "Bio Text (Markdown supported)", name: "text", widget: "markdown" }
+          - { label: "CTA", name: "cta", widget: "string" }
+          - label: "Highlights"
+            name: "highlights"
+            widget: "list"
+            fields:
+              - { label: "Creative Icon", name: "creative_icon", widget: "string" }
+              - { label: "Coding Icon", name: "coding_icon", widget: "string" }
+              - { label: "Creative Title", name: "creative_title", widget: "string" }
+              - { label: "Coding Title", name: "coding_title", widget: "string" }
+              - { label: "Creative Description", name: "creative_desc", widget: "string" }
+              - { label: "Coding Description", name: "coding_desc", widget: "string" }
 
   - name: "projects"
     label: "Projects"
@@ -204,29 +239,6 @@ collections:
           - { label: "Alt Text", name: "altText", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown", hint: "Main article content. Use markdown for headings, lists, and inline images." }
 
-  - name: "portfolio"
-    label: "Portfolio Page"
-    files:
-      - file: "content/pages/portfolio.json"
-        label: "Portfolio Page Configuration"
-        name: "portfolio_page"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
-              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
-              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "plasma" }
-          - label: "Built From Real Work Section"
-            name: "builtFromRealWork"
-            widget: "object"
-            fields:
-              - { label: "Headline", name: "headline", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-
   - name: "journal"
     label: "Blog / Journal"
     label_singular: "Post"
@@ -248,51 +260,6 @@ collections:
         required: false
         field: { label: "Tag", name: "tag", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
-
-  - name: "blog"
-    label: "Blog Page"
-    files:
-      - file: "content/pages/blog.json"
-        label: "Blog Page Configuration"
-        name: "blog_page"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
-              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
-              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
-          - { label: "Page Title", name: "pageTitle", widget: "string" }
-          - { label: "Page Description", name: "pageDescription", widget: "text" }
-
-  - name: "contact"
-    label: "Contact Page"
-    files:
-      - file: "content/pages/contact.json"
-        label: "Contact Page Configuration"
-        name: "contact_page"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
-              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
-              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Availability Status", name: "availability", widget: "string" }
-          - label: "Contact Details"
-            name: "details"
-            widget: "list"
-            fields:
-              - { label: "Label", name: "label", widget: "string" }
-              - { label: "Value", name: "value", widget: "string" }
-              - { label: "Icon", name: "icon", widget: "string" }
 
   - name: "galleries"
     label: "Artwork Galleries"

@@ -42,7 +42,7 @@ export default function AboutPage() {
         <div className="container-punk grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="relative aspect-[2/3] overflow-hidden">
             <Image
-              src={pageConfig.profileImage || "/assets/uploads/redesign.png"}
+              src={pageConfig.profileImage ? `/assets/uploads/${pageConfig.profileImage}` : "/assets/uploads/redesign.png"}
               alt="Kyle De Vares visual work"
               fill
               className="object-cover grayscale-[30%] contrast-110"

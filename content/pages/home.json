@@ -9,7 +9,7 @@
   },
   "aboutSection": {
     "title": "Design, Code, And Loud Visuals.",
-    "image": "/assets/uploads/redesign.png",
+    "image": "redesign.png",
     "stats": [
       {
         "label": "Projects",
