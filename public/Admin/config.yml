@@ -7,7 +7,7 @@ local_backend:
   allowed_hosts:
     - localhost
 
-media_folder: "assets/uploads"
+media_folder: "public/assets/uploads"
 public_folder: "/assets/uploads"
 
 collections:
