@@ -5,7 +5,8 @@
     "eyebrow": "Kyle De Vares",
     "backgroundType": "pattern",
     "background": "#CAFF00",
-    "accent": "volt"
+    "accent": "volt",
+    "heroImage": "redesign.png"
   },
   "aboutSection": {
     "title": "Design, Code, And Loud Visuals.",

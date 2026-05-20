@@ -27,8 +27,8 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
   const heroImgRef = useRef<HTMLDivElement>(null);
   const aboutImgRef = useRef<HTMLDivElement>(null);
   const featuredProjects = projects.slice(0, 4);
-  const heroImage = featuredProjects[0]?.imageUrl || "/assets/uploads/redesign.png";
   const pageConfig = homePageConfig;
+  const heroImage = pageConfig.hero.heroImage ? `/assets/uploads/${pageConfig.hero.heroImage}` : "/assets/uploads/redesign.png";
 
   useEffect(() => {
     const heroImg = heroImgRef.current;

@@ -18,6 +18,17 @@ collections:
         label: "Homepage"
         name: "home"
         fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
+              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
+              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
+              - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
           - label: "About Section"
             name: "aboutSection"
             widget: "object"
