@@ -38,12 +38,13 @@ export default function AboutPage() {
 
       <section className="section-padding bg-ink border-y border-smoke">
         <div className="container-punk grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          <div className="relative aspect-[2/3] overflow-hidden">
+          <div className="relative aspect-[2/3] overflow-hidden max-w-[500px]">
             <Image
               src={pageConfig.profileImage ? `/assets/uploads/${pageConfig.profileImage}` : "/assets/uploads/redesign.png"}
               alt="Kyle De Vares visual work"
               fill
               className="object-cover grayscale-[30%] contrast-110"
+              sizes="(max-width: 768px) 100vw, 500px"
             />
             <div className="absolute inset-0 bg-plasma/5 mix-blend-color" />
             <div className="absolute bottom-0 inset-x-0 h-1/3 bg-gradient-to-t from-ink to-transparent" />
