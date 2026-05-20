@@ -90,7 +90,7 @@ export function PhotoGallery({ items, accent = "volt" }: Props) {
             className="relative overflow-hidden cursor-none group gallery-item aspect-square"
           >
             <Image
-              src={item.image ? `/assets/uploads/${item.image}` : "/assets/uploads/redesign.png"}
+              src={item.image ? (item.image.startsWith('/') ? item.image : `/assets/uploads/${item.image}`) : "/assets/uploads/redesign.png"}
               alt={item.altText || item.caption || `Gallery image ${index + 1}`}
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -159,7 +159,7 @@ export function PhotoGallery({ items, accent = "volt" }: Props) {
               `}
             >
               <Image
-                src={images[selectedIndex].image ? `/assets/uploads/${images[selectedIndex].image}` : "/assets/uploads/redesign.png"}
+                src={images[selectedIndex].image ? (images[selectedIndex].image.startsWith('/') ? images[selectedIndex].image : `/assets/uploads/${images[selectedIndex].image}`) : "/assets/uploads/redesign.png"}
                 alt={images[selectedIndex].altText || images[selectedIndex].caption || `Gallery image ${selectedIndex + 1}`}
                 fill
                 className="object-contain"

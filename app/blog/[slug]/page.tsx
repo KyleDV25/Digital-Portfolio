@@ -46,7 +46,7 @@ export default function BlogPostPage({ params }: Props) {
         </div>
 
         <div className="relative aspect-[21/9] overflow-hidden max-w-5xl mx-auto">
-          <Image src={post.featuredImage ? `/assets/uploads/${post.featuredImage}` : "/assets/uploads/redesign.png"} alt={post.title} fill priority className="object-cover" sizes="100vw" />
+          <Image src={post.featuredImage ? (post.featuredImage.startsWith('/') ? post.featuredImage : `/assets/uploads/${post.featuredImage}`) : "/assets/uploads/redesign.png"} alt={post.title} fill priority className="object-cover" sizes="100vw" />
           <div className="absolute inset-0 bg-gradient-to-b from-void/20 to-transparent" />
         </div>
       </section>

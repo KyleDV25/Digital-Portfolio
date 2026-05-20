@@ -28,7 +28,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
   const aboutImgRef = useRef<HTMLDivElement>(null);
   const featuredProjects = projects.slice(0, 4);
   const pageConfig = homePageConfig;
-  const heroImage = pageConfig.hero.heroImage ? `/assets/uploads/${pageConfig.hero.heroImage}` : "/assets/uploads/redesign.png";
+  const heroImage = pageConfig.hero.heroImage ? (pageConfig.hero.heroImage.startsWith('/') ? pageConfig.hero.heroImage : `/assets/uploads/${pageConfig.hero.heroImage}`) : "/assets/uploads/redesign.png";
 
   useEffect(() => {
     const heroImg = heroImgRef.current;
@@ -152,7 +152,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
         <div className="container-punk">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div ref={aboutImgRef} className="relative aspect-[3/4] overflow-hidden order-2 lg:order-1 max-w-[500px] mx-auto">
-              <Image src={pageConfig.aboutSection.image ? `/assets/uploads/${pageConfig.aboutSection.image}` : "/assets/uploads/redesign.png"} alt="Kyle De Vares design work" fill className="object-cover grayscale contrast-125" sizes="(max-width: 768px) 100vw, 500px" />
+              <Image src={pageConfig.aboutSection.image ? (pageConfig.aboutSection.image.startsWith('/') ? pageConfig.aboutSection.image : `/assets/uploads/${pageConfig.aboutSection.image}`) : "/assets/uploads/redesign.png"} alt="Kyle De Vares design work" fill className="object-cover grayscale contrast-125" sizes="(max-width: 768px) 100vw, 500px" />
               <div className="absolute inset-0 bg-plasma/10 mix-blend-color" />
             </div>
 

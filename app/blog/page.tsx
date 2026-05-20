@@ -42,7 +42,7 @@ export default function BlogPage() {
             <Link href={`/blog/${featured.slug}`} className="group grid grid-cols-1 lg:grid-cols-2 gap-10 items-center" data-hover>
               <div className="relative aspect-[4/3] overflow-hidden max-w-[600px]">
                 <Image
-                  src={featured.featuredImage ? `/assets/uploads/${featured.featuredImage}` : "/assets/uploads/redesign.png"}
+                  src={featured.featuredImage ? (featured.featuredImage.startsWith('/') ? featured.featuredImage : `/assets/uploads/${featured.featuredImage}`) : "/assets/uploads/redesign.png"}
                   alt={featured.title}
                   fill
                   className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
