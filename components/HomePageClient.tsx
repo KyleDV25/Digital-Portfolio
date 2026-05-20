@@ -45,23 +45,6 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
       });
     }
 
-    const aboutImg = aboutImgRef.current;
-    if (aboutImg) {
-      gsap.fromTo(
-        aboutImg,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          ease: "power4.inOut",
-          scrollTrigger: { 
-            trigger: aboutImg, 
-            start: "top 80%",
-          },
-        }
-      );
-    }
 
     const counters = document.querySelectorAll("[data-count]");
     counters.forEach((el) => {
@@ -156,7 +139,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
         <div className="container-punk">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div ref={aboutImgRef} className="relative aspect-[3/4] overflow-hidden order-2 lg:order-1 max-w-[500px] mx-auto">
-              <Image src={pageConfig.aboutSection.image ? (pageConfig.aboutSection.image.startsWith('/') ? pageConfig.aboutSection.image : `/assets/uploads/${pageConfig.aboutSection.image}`) : "/assets/uploads/redesign.png"} alt="Kyle De Vares design work" fill className="object-cover grayscale contrast-125" sizes="(max-width: 768px) 100vw, 500px" />
+              <img src={pageConfig.aboutSection.image ? (pageConfig.aboutSection.image.startsWith('/') ? pageConfig.aboutSection.image : `/assets/uploads/${pageConfig.aboutSection.image}`) : "/assets/uploads/redesign.png"} alt="Kyle De Vares design work" className="w-full h-full object-cover grayscale contrast-125" />
               <div className="absolute inset-0 bg-plasma/10 mix-blend-color" />
             </div>
 
