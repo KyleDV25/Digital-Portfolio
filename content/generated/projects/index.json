@@ -1,0 +1,180 @@
+[
+  {
+    "title": "Brand Identity Design",
+    "description": "Complete brand identity package for a tech startup including logo, color palette, and marketing materials.",
+    "summary": "Complete brand identity package for a tech startup including logo, color palette, and marketing materials.",
+    "category": "Graphic Design",
+    "categoryValue": "graphic-design",
+    "image": "https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Brand+Identity+Project",
+    "featuredImage": "https://via.placeholder.com/800x400/3B82F6/FFFFFF?text=Brand+Identity+Project",
+    "slug": "brand-identity-design",
+    "date": "2024-01-15",
+    "order": 0,
+    "keywords": [
+      "Brand Identity",
+      "Logo Design",
+      "Typography",
+      "Marketing Materials"
+    ]
+  },
+  {
+    "title": "ReBranding AI Generated Logos",
+    "description": "AI can generate an image, but it can’t build a brand. This project shows how I took generic AI outputs and turned them into original, vibe-heavy identities.",
+    "summary": "AI can generate an image, but it can’t build a brand. This project shows how I took generic AI outputs and turned them into original, vibe-heavy identities.",
+    "category": "Graphic Design",
+    "categoryValue": "graphic-design",
+    "image": "/assets/uploads/redesign.png",
+    "featuredImage": "/assets/uploads/redesign.png",
+    "slug": "rebranding-ai-generated-logos",
+    "date": "",
+    "order": 1,
+    "keywords": [
+      "logo",
+      "rebranding",
+      "canva"
+    ]
+  },
+  {
+    "title": "SpectrumPoint — Neurodivergent Profiling Platform",
+    "description": "An interactive web application that visualizes neurodivergent trait patterns across a three-axis model inspired by ASD, ADHD, and OCD frameworks.",
+    "summary": "An interactive web application that visualizes neurodivergent trait patterns across a three-axis model inspired by ASD, ADHD, and OCD frameworks.",
+    "category": "Coding",
+    "categoryValue": "coding",
+    "image": "/assets/uploads/ndtest.png",
+    "featuredImage": "/assets/uploads/ndtest.png",
+    "slug": "spectrumpoint-neurodivergent-profiling-platform",
+    "date": "",
+    "order": 1,
+    "keywords": [
+      "Next.js",
+      "TypeScript",
+      "Data Visualization",
+      "Mental Health Tech",
+      "Accessibility"
+    ]
+  },
+  {
+    "title": "Community Discord Bot",
+    "description": "Custom Discord bot built for my LGBT+ server to support moderation, automate routine tasks, and help maintain a safer, more welcoming space for queer, trans, and non binary members.",
+    "summary": "Custom Discord bot built for my LGBT+ server to support moderation, automate routine tasks, and help maintain a safer, more welcoming space for queer, trans, and non binary members.",
+    "category": "Coding",
+    "categoryValue": "coding",
+    "image": "/assets/uploads/discordbot.png",
+    "featuredImage": "/assets/uploads/discordbot.png",
+    "slug": "community-discord-bot",
+    "date": "",
+    "order": 2,
+    "keywords": [
+      "Discord Bot",
+      "JavaScript",
+      "Community Management",
+      "Moderation Tools",
+      "LGBT+",
+      "API Integration",
+      "Automation",
+      "Inclusive Design"
+    ]
+  },
+  {
+    "title": "Designing Pride: Honouring the Icons Who Built Our Future",
+    "description": "A retro-inspired Pride Month poster series celebrating two pivotal LGBTQ+ icons through bold typography, stylised portrait illustration, and expressive colour storytelling.",
+    "summary": "A retro-inspired Pride Month poster series celebrating two pivotal LGBTQ+ icons through bold typography, stylised portrait illustration, and expressive colour storytelling.",
+    "category": "Graphic Design",
+    "categoryValue": "graphic-design",
+    "image": "/assets/uploads/green-and-white-retro-illustrative-typography-coffee-poster.png",
+    "featuredImage": "/assets/uploads/green-and-white-retro-illustrative-typography-coffee-poster.png",
+    "slug": "designing-pride-honouring-the-icons-who-built-our-future",
+    "date": "",
+    "order": 2,
+    "keywords": [
+      "Graphic Design",
+      "Digital Illustration",
+      "Typography",
+      "Retro Design",
+      "Visual Storytelling"
+    ]
+  },
+  {
+    "title": "Dual Mind Digital Portfolio",
+    "description": "I designed and built a dual-mode digital portfolio split into Creative and Tech, using a toggle to switch views and filter content. The project reflects how I balance artistic design and technical problem solving while focusing on clarity, user experience, and interactive front end logic.",
+    "summary": "I designed and built a dual-mode digital portfolio split into Creative and Tech, using a toggle to switch views and filter content. The project reflects how I balance artistic design and technical problem solving while focusing on clarity, user experience, and interactive front end logic.",
+    "category": "Coding",
+    "categoryValue": "coding",
+    "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23dbeafe'/%3E%3Cstop offset='100%25' stop-color='%23f8fbff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='700' fill='url(%23g)'/%3E%3Ccircle cx='1010' cy='140' r='130' fill='%2325aae1' fill-opacity='0.12'/%3E%3Ccircle cx='170' cy='560' r='170' fill='%23177ca8' fill-opacity='0.1'/%3E%3Ctext x='80' y='340' fill='%23177ca8' font-family='Arial, sans-serif' font-size='52' font-weight='700'%3EDual%20Mind%20Digital%20Portfolio%3C/text%3E%3C/svg%3E",
+    "featuredImage": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23dbeafe'/%3E%3Cstop offset='100%25' stop-color='%23f8fbff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='700' fill='url(%23g)'/%3E%3Ccircle cx='1010' cy='140' r='130' fill='%2325aae1' fill-opacity='0.12'/%3E%3Ccircle cx='170' cy='560' r='170' fill='%23177ca8' fill-opacity='0.1'/%3E%3Ctext x='80' y='340' fill='%23177ca8' font-family='Arial, sans-serif' font-size='52' font-weight='700'%3EDual%20Mind%20Digital%20Portfolio%3C/text%3E%3C/svg%3E",
+    "slug": "dual-mind-digital-portfolio",
+    "date": "",
+    "order": 2,
+    "keywords": [
+      "Portfolio Design",
+      "Front End Development",
+      "UX/UI",
+      "JavaScript",
+      "Creative Coding",
+      "Personal Branding",
+      "Interactive Design"
+    ]
+  },
+  {
+    "title": "Family Keys Illustration",
+    "description": "This piece was created as a personal gift for a family member, with each illustrated key representing an individual person within the family. Every key was designed with unique symbols, shapes, and details to reflect that person’s personality, energy, and role within the family.",
+    "summary": "This piece was created as a personal gift for a family member, with each illustrated key representing an individual person within the family. Every key was designed with unique symbols, shapes, and details to reflect that person’s personality, energy, and role within the family.",
+    "category": "Graphic Design",
+    "categoryValue": "graphic-design",
+    "image": "/assets/uploads/family-keys.jpg",
+    "featuredImage": "/assets/uploads/family-keys.jpg",
+    "slug": "family-keys-illustration",
+    "date": "",
+    "order": 2,
+    "keywords": [
+      "Illustration",
+      "Symbolic Design",
+      "Visual Storytelling",
+      "Personal Project",
+      "Concept Art",
+      "Emotional Design",
+      "Gift Artwork"
+    ]
+  },
+  {
+    "title": "Outcast – Unity Game Prototype",
+    "description": "A Unity game test run showcasing core gameplay functionality and character animation for an original concept inspired by superpowered survival narratives.",
+    "summary": "A Unity game test run showcasing core gameplay functionality and character animation for an original concept inspired by superpowered survival narratives.",
+    "category": "Coding",
+    "categoryValue": "coding",
+    "image": "/assets/uploads/capture4.png",
+    "featuredImage": "/assets/uploads/capture4.png",
+    "slug": "outcast-unity-game-prototype",
+    "date": "",
+    "order": 3,
+    "keywords": [
+      "Unity engine",
+      "game prototype",
+      "character animation",
+      "sprite frames",
+      "creative media",
+      "gameplay testing"
+    ]
+  },
+  {
+    "title": "Pong Recreation – First HTML Game",
+    "description": "A recreated version of the classic Pong game built during my BTEC ICT course using HTML, CSS, and basic programming logic.",
+    "summary": "A recreated version of the classic Pong game built during my BTEC ICT course using HTML, CSS, and basic programming logic.",
+    "category": "Coding",
+    "categoryValue": "coding",
+    "image": "/assets/uploads/pong.png",
+    "featuredImage": "/assets/uploads/pong.png",
+    "slug": "pong-recreation-first-html-game",
+    "date": "",
+    "order": 4,
+    "keywords": [
+      "HTML game",
+      "CSS styling",
+      "if statements",
+      "beginner programming",
+      "Pong recreation",
+      "BTEC ICT",
+      "User-Testing"
+    ]
+  }
+]

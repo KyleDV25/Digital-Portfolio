@@ -1,0 +1,58 @@
+[build]
+  publish = ".next"
+  command = "npm run build:content && npm run build"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/Admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/projects"
+  to = "/portfolio"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/projects/:slug"
+  to = "/portfolio/:slug"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/journal"
+  to = "/blog"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/journal/:slug"
+  to = "/blog/:slug"
+  status = 301
+  force = true

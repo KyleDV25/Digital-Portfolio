@@ -1,0 +1,55 @@
+{
+  "email": "kyledevares025@gmail.com",
+  "resume_pdf": "",
+  "resume_button_text": "Download PDF",
+  "pageHeroes": {
+    "home": {
+      "title": "KYLE",
+      "subtitle": "DE VARES",
+      "eyebrow": "Creative Digital Artist",
+      "background": {
+        "type": "pattern",
+        "patternColor": "#CAFF00"
+      },
+      "accent": "volt"
+    },
+    "portfolio": {
+      "title": "WORK",
+      "eyebrow": "Portfolio",
+      "background": {
+        "type": "pattern",
+        "patternColor": "#BF00FF"
+      },
+      "accent": "plasma"
+    },
+    "about": {
+      "title": "CREATIVE",
+      "subtitle": "SYSTEMS",
+      "eyebrow": "About Kyle",
+      "background": {
+        "type": "pattern",
+        "patternColor": "#CAFF00"
+      },
+      "accent": "volt"
+    },
+    "blog": {
+      "title": "WORDS",
+      "eyebrow": "Journal",
+      "background": {
+        "type": "pattern",
+        "patternColor": "#00FFEE"
+      },
+      "accent": "ice"
+    },
+    "contact": {
+      "title": "GET IN",
+      "subtitle": "TOUCH",
+      "eyebrow": "Contact",
+      "background": {
+        "type": "pattern",
+        "patternColor": "#FF0035"
+      },
+      "accent": "blood"
+    }
+  }
+}

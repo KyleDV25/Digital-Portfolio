@@ -1,0 +1,29 @@
+{
+  "skills": [
+    {
+      "name": "Photoshop",
+      "icon": "📷",
+      "skill_id": "photoshop"
+    },
+    {
+      "name": "Canva",
+      "icon": "🎨",
+      "skill_id": "canva"
+    },
+    {
+      "name": "Branding",
+      "icon": "🏷️",
+      "skill_id": "branding"
+    },
+    {
+      "name": "Digital Illustration",
+      "icon": "✏️",
+      "skill_id": "illustration"
+    },
+    {
+      "name": "Creative Copywriting",
+      "icon": "✨",
+      "skill_id": "copywriting"
+    }
+  ]
+}

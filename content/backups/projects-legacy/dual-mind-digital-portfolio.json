@@ -1,0 +1,17 @@
+{
+  "order": 2,
+  "title": "Dual Mind Digital Portfolio",
+  "description": "I designed and built a digital portfolio split into two sides: Creative and Tech, inspired by the concept of the left and right brain. The goal was to visually and functionally represent how I work across both creative design and technical problem solving rather than forcing everything into one category.\n\nThe site uses a toggle in the top corner that allows visitors to instantly switch between Creative and Tech views, filtering projects and content without changing pages. This keeps the experience simple while clearly showing the separation and connection between both skill sets.\n\nThis project focuses on user experience, clarity, and personal identity. It reflects how I think, how I work, and how I move between artistic expression and technical logic depending on the task. It also helped me strengthen my skills in front end development, UI logic, and interactive design.",
+  "project_id": "dual-mind-portfolio",
+  "tags": [
+    "Portfolio Design",
+    "Front End Development",
+    "UX/UI",
+    "JavaScript",
+    "Creative Coding",
+    "Personal Branding",
+    "Interactive Design"
+  ],
+  "github_url": "https://github.com/KyleDV25/Digital-Portfolio.git",
+  "mini_description": "I designed and built a dual-mode digital portfolio split into Creative and Tech, using a toggle to switch views and filter content. The project reflects how I balance artistic design and technical problem solving while focusing on clarity, user experience, and interactive front end logic."
+}

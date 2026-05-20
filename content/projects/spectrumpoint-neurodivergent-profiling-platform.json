@@ -1,0 +1,60 @@
+{
+  "title": "SpectrumPoint — Neurodivergent Profiling Platform",
+  "slug": "spectrumpoint-neurodivergent-profiling-platform",
+  "date": "",
+  "order": 1,
+  "description": "An interactive web application that visualizes neurodivergent trait patterns across a three-axis model inspired by ASD, ADHD, and OCD frameworks.",
+  "category": {
+    "label": "Coding",
+    "value": "coding"
+  },
+  "featuredImage": "/assets/uploads/ndtest.png",
+  "keywords": [
+    "Next.js",
+    "TypeScript",
+    "Data Visualization",
+    "Mental Health Tech",
+    "Accessibility"
+  ],
+  "highlightBox": {
+    "style": "info",
+    "title": "Project Snapshot",
+    "body": "An interactive web application that visualizes neurodivergent trait patterns across a three-axis model inspired by ASD, ADHD, and OCD frameworks."
+  },
+  "actionButtons": [
+    {
+      "label": "View Code",
+      "type": "link",
+      "style": "primary",
+      "url": "https://github.com/KyleDV25/SpectrumPoint.git",
+      "file": ""
+    }
+  ],
+  "mediaGallery": [
+    {
+      "type": "image",
+      "image": "/assets/uploads/ndtest.png",
+      "video": "",
+      "posterImage": "",
+      "caption": "",
+      "altText": ""
+    },
+    {
+      "type": "image",
+      "image": "/assets/uploads/ndtest2.png",
+      "video": "",
+      "posterImage": "",
+      "caption": "",
+      "altText": ""
+    },
+    {
+      "type": "image",
+      "image": "/assets/uploads/ndtest3.png",
+      "video": "",
+      "posterImage": "",
+      "caption": "",
+      "altText": ""
+    }
+  ],
+  "body": "**SpectrumPoint** is a full stack web application currently in development that reimagines how **neurodivergent** traits are explored and visualized.\n\nInstead of using binary diagnostic categories, the platform applies a dimensional scoring model across three behavioural axes inspired by Autism spectrum disorder, Attention deficit hyperactivity disorder, and Obsessive-compulsive disorder.\n\nUsers complete a weighted behavioural assessment built on a 0–4 Likert scale. Each response contributes to axis scores which are normalized and plotted inside an equilateral triangle using barycentric coordinate conversion. The result is a visual neuro profile that highlights overlapping trait patterns rather than forcing categorical labels.\n\n**Key Features in Development:**\n\n* Multi step assessment engine with weighted scoring logic\n* Normalized axis scoring (0–100 scale)\n* Real time triangular visualization using SVG rendering\n* User authentication and saved assessment history\n* Pattern based trait summaries instead of diagnostic claims\n* Ethical disclaimer system to prevent misuse as medical diagnosis\n* Tech Stack:\n* Next.js (App Router)\n* TypeScript\n* Tailwind CSS\n* Node.js backend\n* PostgreSQL\n* Prisma ORM\n\nSpectrumPoint is designed as both a portfolio demonstration of full stack engineering and a conceptual exploration of dimensional mental health modeling. The project emphasizes accessibility, ethical design, and data visualization clarity.\n\nStatus: In Development"
+}

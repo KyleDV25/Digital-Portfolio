@@ -1,0 +1,32 @@
+{
+  "order": 2,
+  "title": "Community Discord Bot",
+  "description": "I built a custom Discord bot for my LGBT+ server to help manage the community, improve moderation flow, and create a safer more welcoming space for queer, trans, and non binary members.\n\nThe bot supports moderation assistance, automated responses, and quality of life features that reduce manual admin work. It was designed with community safety, accessibility, and inclusivity in mind, making sure rules, boundaries, and support tools are clear and consistent for all members.\n\nThis project helped me strengthen my understanding of Discord APIs, bot logic, permissions handling, and user focused system design. It also reflects my ability to build tools that support real communities with real needs rather than generic one size fits all solutions.",
+  "project_id": "discordbot",
+  "tags": [
+    "Discord Bot",
+    "JavaScript",
+    "Community Management",
+    "Moderation Tools",
+    "LGBT+",
+    "API Integration",
+    "Automation",
+    "Inclusive Design"
+  ],
+  "github_url": "https://github.com/KyleDV25/DaddyDispatcher.git",
+  "mini_description": "Custom Discord bot built for my LGBT+ server to support moderation, automate routine tasks, and help maintain a safer, more welcoming space for queer, trans, and non binary members.",
+  "gallery": [
+    {
+      "image": "/assets/uploads/discordbot.png"
+    },
+    {
+      "image": "/assets/uploads/discordbot2.png"
+    },
+    {
+      "image": "/assets/uploads/discordbot3.png"
+    },
+    {
+      "image": "/assets/uploads/discordbot4.png"
+    }
+  ]
+}

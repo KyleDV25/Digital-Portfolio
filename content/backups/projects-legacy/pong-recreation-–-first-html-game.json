@@ -1,0 +1,46 @@
+{
+  "project_id": "pong-html-game",
+  "keywords": [
+    "HTML game",
+    "CSS styling",
+    "if statements",
+    "beginner programming",
+    "Pong recreation",
+    "BTEC ICT",
+    "User-Testing"
+  ],
+  "order": 4,
+  "gallery": [
+    {
+      "image": "/assets/uploads/pong.png",
+      "caption": "Visual example of final game"
+    },
+    {
+      "image": "/assets/uploads/capture-2.png",
+      "caption": "Diagram of the functions "
+    }
+  ],
+  "mini_description": "A recreated version of the classic Pong game built during my BTEC ICT course using HTML, CSS, and basic programming logic.",
+  "title": "Pong Recreation – First HTML Game",
+  "tags": [
+    "HTML",
+    "CSS",
+    "Programming",
+    "Game Development",
+    "Education",
+    "User Testing"
+  ],
+  "project_buttons": [
+    {
+      "file": "/assets/uploads/updated-pong.html",
+      "text": "Pong Game",
+      "type": "File"
+    },
+    {
+      "text": "Feedback PDF",
+      "type": "File",
+      "file": "/assets/uploads/pong-feedbackcompletetd.pdf"
+    }
+  ],
+  "description": "During my BTEC ICT course, I took part in a programming unit where we were tasked with creating our first HTML-based game. The brief was to recreate the classic game Pong, focusing on understanding core programming concepts rather than using game engines or libraries.\n\nThe game was built using HTML for structure and functionality, with CSS handling the visual styling such as colours and layout. The main game logic relied heavily on if statements to control paddle movement, ball collision, scoring, and game boundaries. This project helped me develop a strong foundation in logical thinking, condition-based behaviour, and problem-solving within a programming context.\n\nAfter completing the game, the entire class participated in a user testing phase. We showcased our games to other students and allowed them to playtest, collecting both quantitative feedback (such as ratings and difficulty scores) and qualitative feedback (opinions, suggestions, and usability comments). This feedback was then analysed to identify areas for improvement, reinforcing the importance of user experience, accessibility, and iterative design in software development.\n\nThis project marked my first real experience combining programming, design, and user testing into a complete interactive product."
+}

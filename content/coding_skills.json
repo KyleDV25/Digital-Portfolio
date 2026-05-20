@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "name": "HTML",
+      "icon": "HTML",
+      "skill_id": "html"
+    },
+    {
+      "name": "CSS",
+      "icon": "CSS",
+      "skill_id": "css"
+    },
+    {
+      "name": "JavaScript",
+      "icon": "JS",
+      "skill_id": "javascript"
+    },
+    {
+      "name": "Git",
+      "icon": "🔧",
+      "skill_id": "git"
+    },
+    {
+      "name": "Agile",
+      "icon": "🔄",
+      "skill_id": "agile"
+    },
+    {
+      "name": "Team Collaboration",
+      "icon": "🤝",
+      "skill_id": "teamwork"
+    }
+  ]
+}

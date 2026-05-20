@@ -1,0 +1,37 @@
+{
+  "title": "Dual Mind Digital Portfolio",
+  "slug": "dual-mind-digital-portfolio",
+  "description": "I designed and built a dual-mode digital portfolio split into Creative and Tech, using a toggle to switch views and filter content. The project reflects how I balance artistic design and technical problem solving while focusing on clarity, user experience, and interactive front end logic.",
+  "summary": "I designed and built a dual-mode digital portfolio split into Creative and Tech, using a toggle to switch views and filter content. The project reflects how I balance artistic design and technical problem solving while focusing on clarity, user experience, and interactive front end logic.",
+  "category": "Coding",
+  "categoryValue": "coding",
+  "image": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23dbeafe'/%3E%3Cstop offset='100%25' stop-color='%23f8fbff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='700' fill='url(%23g)'/%3E%3Ccircle cx='1010' cy='140' r='130' fill='%2325aae1' fill-opacity='0.12'/%3E%3Ccircle cx='170' cy='560' r='170' fill='%23177ca8' fill-opacity='0.1'/%3E%3Ctext x='80' y='340' fill='%23177ca8' font-family='Arial, sans-serif' font-size='52' font-weight='700'%3EDual%20Mind%20Digital%20Portfolio%3C/text%3E%3C/svg%3E",
+  "featuredImage": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 700'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23dbeafe'/%3E%3Cstop offset='100%25' stop-color='%23f8fbff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1200' height='700' fill='url(%23g)'/%3E%3Ccircle cx='1010' cy='140' r='130' fill='%2325aae1' fill-opacity='0.12'/%3E%3Ccircle cx='170' cy='560' r='170' fill='%23177ca8' fill-opacity='0.1'/%3E%3Ctext x='80' y='340' fill='%23177ca8' font-family='Arial, sans-serif' font-size='52' font-weight='700'%3EDual%20Mind%20Digital%20Portfolio%3C/text%3E%3C/svg%3E",
+  "date": "",
+  "order": 2,
+  "keywords": [
+    "Portfolio Design",
+    "Front End Development",
+    "UX/UI",
+    "JavaScript",
+    "Creative Coding",
+    "Personal Branding",
+    "Interactive Design"
+  ],
+  "highlightBox": {
+    "style": "info",
+    "title": "Project Snapshot",
+    "body": "I designed and built a dual-mode digital portfolio split into Creative and Tech, using a toggle to switch views and filter content. The project reflects how I balance artistic design and technical problem solving while focusing on clarity, user experience, and interactive front end logic."
+  },
+  "actionButtons": [
+    {
+      "label": "View Code",
+      "type": "link",
+      "style": "primary",
+      "href": "https://github.com/KyleDV25/Digital-Portfolio.git"
+    }
+  ],
+  "mediaGallery": [],
+  "body": "I designed and built a digital portfolio split into two sides: Creative and Tech, inspired by the concept of the left and right brain. The goal was to visually and functionally represent how I work across both creative design and technical problem solving rather than forcing everything into one category.\n\nThe site uses a toggle in the top corner that allows visitors to instantly switch between Creative and Tech views, filtering projects and content without changing pages. This keeps the experience simple while clearly showing the separation and connection between both skill sets.\n\nThis project focuses on user experience, clarity, and personal identity. It reflects how I think, how I work, and how I move between artistic expression and technical logic depending on the task. It also helped me strengthen my skills in front end development, UI logic, and interactive design.",
+  "bodyHtml": "<p>I designed and built a digital portfolio split into two sides: Creative and Tech, inspired by the concept of the left and right brain. The goal was to visually and functionally represent how I work across both creative design and technical problem solving rather than forcing everything into one category.</p>\n<p>The site uses a toggle in the top corner that allows visitors to instantly switch between Creative and Tech views, filtering projects and content without changing pages. This keeps the experience simple while clearly showing the separation and connection between both skill sets.</p>\n<p>This project focuses on user experience, clarity, and personal identity. It reflects how I think, how I work, and how I move between artistic expression and technical logic depending on the task. It also helped me strengthen my skills in front end development, UI logic, and interactive design.</p>\n"
+}

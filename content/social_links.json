@@ -1,0 +1,28 @@
+{
+  "links": [
+    {
+      "name": "Instagram",
+      "icon": "📷",
+      "url": "#",
+      "order": 1
+    },
+    {
+      "name": "LinkedIn",
+      "icon": "💼",
+      "url": "#",
+      "order": 2
+    },
+    {
+      "name": "Bear Spirits Arts",
+      "icon": "🐻",
+      "url": "#",
+      "order": 3
+    },
+    {
+      "name": "GitHub",
+      "icon": "🔧",
+      "url": "#",
+      "order": 4
+    }
+  ]
+}
