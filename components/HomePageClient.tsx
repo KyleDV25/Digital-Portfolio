@@ -11,17 +11,9 @@ import { MarqueeBar } from "@/components/MarqueeBar";
 import { ProjectCard } from "@/components/ProjectCard";
 import { MagneticButton } from "@/components/MagneticButton";
 import type { ProjectCardData, JournalPost, SiteData } from "@/lib/content";
+import homePageConfig from "@/content/pages/home.json";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const disciplines = [
-  "Digital Art",
-  "Brand Identity",
-  "Web Experiments",
-  "Illustration",
-  "Community Tools",
-  "Visual Storytelling",
-];
 
 type Props = {
   site: SiteData;
@@ -36,6 +28,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
   const aboutImgRef = useRef<HTMLDivElement>(null);
   const featuredProjects = projects.slice(0, 4);
   const heroImage = featuredProjects[0]?.imageUrl || "/assets/uploads/redesign.png";
+  const pageConfig = homePageConfig;
 
   useEffect(() => {
     const heroImg = heroImgRef.current;
@@ -159,7 +152,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
         <div className="container-punk">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div ref={aboutImgRef} className="relative aspect-[3/4] overflow-hidden order-2 lg:order-1">
-              <Image src="/assets/uploads/redesign.png" alt="Kyle De Vares design work" fill className="object-cover grayscale contrast-125" />
+              <Image src={pageConfig.aboutSection.image || "/assets/uploads/redesign.png"} alt="Kyle De Vares design work" fill className="object-cover grayscale contrast-125" />
               <div className="absolute inset-0 bg-plasma/10 mix-blend-color" />
             </div>
 
@@ -170,21 +163,17 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
                 split="lines"
                 className="font-display text-[clamp(3rem,7vw,7rem)] leading-none tracking-tightest text-chalk uppercase mb-8"
               >
-                Design, Code, And Loud Visuals.
+                {pageConfig.aboutSection.title || "Design, Code, And Loud Visuals."}
               </TextReveal>
               <p className="font-mono text-ghost text-sm leading-relaxed mb-10 text-wrap">{aboutSummary}</p>
 
               <div className="grid grid-cols-3 gap-6 mb-10 pt-8 border-t border-smoke">
-                {[
-                  { num: projects.length, label: "Projects" },
-                  { num: 3, label: "Creative Lanes" },
-                  { num: 1, label: "Studio" },
-                ].map(({ num, label }) => (
-                  <div key={label}>
+                {pageConfig.aboutSection.stats?.map((stat: any, i: number) => (
+                  <div key={stat.label}>
                     <p className="font-display text-5xl text-volt leading-none mb-1">
-                      <span data-count={num}>0</span>+
+                      <span data-count={stat.num || projects.length}>0</span>+
                     </p>
-                    <p className="font-label text-[0.62rem] text-ghost tracking-widest uppercase">{label}</p>
+                    <p className="font-label text-[0.62rem] text-ghost tracking-widest uppercase">{stat.label}</p>
                   </div>
                 ))}
               </div>
@@ -231,7 +220,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
         <div className="container-punk">
           <p className="section-eyebrow mb-8">What I do</p>
           <ul className="divide-y divide-smoke" role="list">
-            {disciplines.map((discipline, i) => (
+            {pageConfig.disciplines?.map((discipline: string, i: number) => (
               <li
                 key={discipline}
                 className="group flex items-center justify-between py-5 lg:py-7 cursor-default hover:bg-ash transition-colors duration-200 px-0 hover:px-4"
@@ -254,7 +243,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
             <div>
               <p className="font-label text-void text-[0.65rem] tracking-widest uppercase mb-3">// Contact</p>
               <h2 className="font-display text-[clamp(2.5rem,8vw,8rem)] leading-none tracking-tightest text-void uppercase">
-                Got a vision?
+                {pageConfig.contactSection.headline || "Got a vision?"}
               </h2>
             </div>
             <MagneticButton>
@@ -262,7 +251,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
                 href="/contact"
                 className="inline-flex items-center gap-3 font-label text-[0.72rem] tracking-widest uppercase px-8 py-4 border border-void text-void hover:bg-void hover:text-volt transition-all duration-300"
               >
-                <span>Let's Talk</span>
+                <span>{pageConfig.contactSection.ctaLabel || "Let's Talk"}</span>
               </Link>
             </MagneticButton>
           </div>
@@ -279,12 +268,12 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
                 split="words"
                 className="font-display text-fluid-xl text-chalk leading-none tracking-tightest uppercase"
               >
-                Latest Thoughts
+                {pageConfig.journalSection.title || "Latest Thoughts"}
               </TextReveal>
             </div>
             <MagneticButton>
               <Link href="/blog" className="btn-punk shrink-0">
-                <span>All Posts</span>
+                <span>{pageConfig.journalSection.ctaLabel || "All Posts"}</span>
               </Link>
             </MagneticButton>
           </div>

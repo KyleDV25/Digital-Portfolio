@@ -7,10 +7,44 @@
     "background": "#CAFF00",
     "accent": "volt"
   },
+  "aboutSection": {
+    "title": "Design, Code, And Loud Visuals.",
+    "image": "/assets/uploads/redesign.png",
+    "stats": [
+      {
+        "label": "Projects",
+        "num": 0
+      },
+      {
+        "label": "Creative Lanes",
+        "num": 3
+      },
+      {
+        "label": "Studio",
+        "num": 1
+      }
+    ]
+  },
   "featuredSection": {
     "title": "Featured Work",
     "description": "A selection of recent projects showcasing digital art, web development, and creative problem-solving.",
     "ctaLabel": "View All Projects",
     "ctaLink": "/portfolio"
+  },
+  "disciplines": [
+    "Digital Art",
+    "Brand Identity",
+    "Web Experiments",
+    "Illustration",
+    "Community Tools",
+    "Visual Storytelling"
+  ],
+  "contactSection": {
+    "headline": "Got a vision?",
+    "ctaLabel": "Let's Talk"
+  },
+  "journalSection": {
+    "title": "Latest Thoughts",
+    "ctaLabel": "All Posts"
   }
 }

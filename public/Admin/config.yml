@@ -39,6 +39,18 @@ collections:
               - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
               - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
               - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
+          - label: "About Section"
+            name: "aboutSection"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Number", name: "num", widget: "number" }
           - label: "Featured Section"
             name: "featuredSection"
             widget: "object"
@@ -47,6 +59,22 @@ collections:
               - { label: "Description", name: "description", widget: "text" }
               - { label: "CTA Label", name: "ctaLabel", widget: "string" }
               - { label: "CTA Link", name: "ctaLink", widget: "string" }
+          - label: "Disciplines"
+            name: "disciplines"
+            widget: "list"
+            field: { label: "Discipline", name: "discipline", widget: "string" }
+          - label: "Contact Section"
+            name: "contactSection"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "CTA Label", name: "ctaLabel", widget: "string" }
+          - label: "Journal Section"
+            name: "journalSection"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "CTA Label", name: "ctaLabel", widget: "string" }
 
   - name: "about"
     label: "About Page"
