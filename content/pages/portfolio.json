@@ -1,0 +1,13 @@
+{
+  "hero": {
+    "title": "WORK",
+    "eyebrow": "Portfolio",
+    "backgroundType": "pattern",
+    "background": "#BF00FF",
+    "accent": "plasma"
+  },
+  "builtFromRealWork": {
+    "headline": "Built From Real Work",
+    "description": "These pieces come from Kyle's existing portfolio archive: design, coding, illustration, community tooling, and visual experiments rebuilt inside the punk visual system."
+  }
+}

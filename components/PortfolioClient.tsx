@@ -7,6 +7,7 @@ import { MarqueeBar } from "@/components/MarqueeBar";
 import { GlitchText } from "@/components/GlitchText";
 import { PageHero } from "@/components/PageHero";
 import type { ProjectCardData } from "@/lib/content";
+import portfolioPageConfig from "@/content/pages/portfolio.json";
 
 type Props = {
   projects: ProjectCardData[];
@@ -19,17 +20,15 @@ export function PortfolioClient({ projects }: Props) {
   );
   const [active, setActive] = useState("All");
   const filtered = active === "All" ? projects : projects.filter((project) => project.category === active);
+  const pageConfig = portfolioPageConfig;
 
   return (
     <>
       <PageHero
-        title="WORK"
-        eyebrow="Portfolio"
-        background={{
-          type: "pattern",
-          patternColor: "#BF00FF"
-        }}
-        accent="plasma"
+        title={pageConfig.hero.title || "WORK"}
+        eyebrow={pageConfig.hero.eyebrow || "Portfolio"}
+        background={pageConfig.hero.backgroundType === "pattern" ? { type: "pattern", patternColor: pageConfig.hero.background } : undefined}
+        accent={(pageConfig.hero.accent as "volt" | "plasma" | "ice" | "blood") || "plasma"}
       />
 
       <section className="bg-void border-b border-smoke">
@@ -79,11 +78,10 @@ export function PortfolioClient({ projects }: Props) {
             split="words"
             className="font-display text-fluid-xl leading-none tracking-tightest text-chalk uppercase mb-6"
           >
-            Built From Real Work
+            {pageConfig.builtFromRealWork.headline || "Built From Real Work"}
           </TextReveal>
           <p className="font-mono text-sm text-ghost max-w-2xl leading-relaxed">
-            These pieces come from Kyle's existing portfolio archive: design, coding, illustration, community tooling,
-            and visual experiments rebuilt inside Claude's punk visual system.
+            {pageConfig.builtFromRealWork.description || "These pieces come from Kyle's existing portfolio archive: design, coding, illustration, community tooling, and visual experiments rebuilt inside the punk visual system."}
           </p>
         </div>
       </section>

@@ -8,57 +8,32 @@ import { GlitchText } from "@/components/GlitchText";
 import { PageHero } from "@/components/PageHero";
 import { getAboutData, getPageHero, renderMarkdown } from "@/lib/content";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
+import aboutPageConfig from "@/content/pages/about.json";
 
 export const metadata: Metadata = {
   title: "About",
   description: "About Kyle De Vares, creative digital artist and web builder.",
 };
 
-const skills = [
-  { label: "Digital Art", level: 95 },
-  { label: "Brand Identity", level: 90 },
-  { label: "Illustration", level: 88 },
-  { label: "Web Development", level: 84 },
-  { label: "Photoshop", level: 92 },
-  { label: "Community Tools", level: 78 },
-];
-
-const timeline = [
-  {
-    year: "2024",
-    event: "Web Developer Internship - IPOP Digitals",
-    detail: "Built and maintained responsive websites, fixed bugs, and collaborated with development teams using Git and Agile workflows.",
-  },
-  {
-    year: "2024",
-    event: "Freelance commissions and store",
-    detail: "Built a creative practice around custom visuals, branding, illustration, and digital products.",
-  },
-  {
-    year: "2023",
-    event: "Computer Science and Digital Media",
-    detail: "Combined technical study with creative media practice across design, code, and visual storytelling.",
-  },
-];
-
 export default function AboutPage() {
   const about = getAboutData();
   const heroConfig = getPageHero("about");
+  const pageConfig = aboutPageConfig;
 
   return (
     <>
       <PageHero
-        title={heroConfig?.title || "CREATIVE"}
-        subtitle={heroConfig?.subtitle || "SYSTEMS"}
-        eyebrow={heroConfig?.eyebrow || "About Kyle"}
-        background={heroConfig?.background}
-        accent={heroConfig?.accent || "volt"}
+        title={pageConfig.hero.title || "CREATIVE"}
+        subtitle={pageConfig.hero.subtitle || "SYSTEMS"}
+        eyebrow={pageConfig.hero.eyebrow || "About Kyle"}
+        background={pageConfig.hero.backgroundType === "pattern" ? { type: "pattern", patternColor: pageConfig.hero.background } : undefined}
+        accent={(pageConfig.hero.accent as "volt" | "plasma" | "ice" | "blood") || "volt"}
       >
         <div className="hr-punk container-punk pb-8">Digital Artist - Web Builder - Visual Storyteller</div>
       </PageHero>
 
       <MarqueeBar
-        items={["Digital Art", "Branding", "Illustration", "Web", "Commissions", "Queer Creativity", "Community"]}
+        items={pageConfig.marqueeItems || ["Digital Art", "Branding", "Illustration", "Web", "Commissions", "Queer Creativity", "Community"]}
         accent="plasma"
         direction="right"
       />
@@ -67,7 +42,7 @@ export default function AboutPage() {
         <div className="container-punk grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div className="relative aspect-[2/3] overflow-hidden">
             <Image
-              src="/assets/uploads/redesign.png"
+              src={pageConfig.profileImage || "/assets/uploads/redesign.png"}
               alt="Kyle De Vares visual work"
               fill
               className="object-cover grayscale-[30%] contrast-110"
@@ -92,7 +67,7 @@ export default function AboutPage() {
             <MarkdownRenderer content={renderMarkdown(about.bio.slice(0, 4).join("\n\n"))} className="mb-12" />
 
             <div className="flex flex-wrap gap-2 mb-10">
-              {["Photoshop", "Branding", "Illustration", "Web Development", "Digital Media", "Commissions"].map((tag) => (
+              {pageConfig.tags?.map((tag) => (
                 <span key={tag} className="tag tag-volt">
                   {tag}
                 </span>
@@ -119,7 +94,7 @@ export default function AboutPage() {
         <div className="container-punk">
           <p className="section-eyebrow mb-10">Disciplines</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skills.map(({ label, level }) => (
+            {pageConfig.disciplines?.map(({ label, level }) => (
               <div key={label} className="border-b border-smoke pb-6">
                 <div className="flex items-center justify-between mb-3">
                   <span className="font-condensed font-bold text-xl text-chalk uppercase tracking-wide">{label}</span>
@@ -147,7 +122,7 @@ export default function AboutPage() {
 
           <div className="relative">
             <div className="absolute left-0 top-0 bottom-0 w-px bg-smoke hidden lg:block" />
-            {timeline.map(({ year, event, detail }) => (
+            {pageConfig.timeline?.map(({ year, event, detail }) => (
               <div
                 key={event}
                 className="group grid grid-cols-1 lg:grid-cols-[180px_1fr] gap-4 py-8 border-b border-smoke hover:bg-ash/50 transition-colors duration-300 lg:pl-8"

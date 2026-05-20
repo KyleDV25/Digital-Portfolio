@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "CREATIVE",
+    "subtitle": "SYSTEMS",
+    "eyebrow": "About Kyle",
+    "backgroundType": "pattern",
+    "background": "#BF00FF",
+    "accent": "volt"
+  },
+  "profileImage": "/assets/uploads/redesign.png",
+  "tags": [
+    "Photoshop",
+    "Branding",
+    "Illustration",
+    "Web Development",
+    "Digital Media",
+    "Commissions"
+  ],
+  "disciplines": [
+    {
+      "label": "Digital Art",
+      "level": 95
+    },
+    {
+      "label": "Brand Identity",
+      "level": 90
+    },
+    {
+      "label": "Illustration",
+      "level": 88
+    },
+    {
+      "label": "Web Development",
+      "level": 84
+    },
+    {
+      "label": "Photoshop",
+      "level": 92
+    },
+    {
+      "label": "Community Tools",
+      "level": 78
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2024",
+      "event": "Web Developer Internship - IPOP Digitals",
+      "detail": "Built and maintained responsive websites, fixed bugs, and collaborated with development teams using Git and Agile workflows."
+    },
+    {
+      "year": "2024",
+      "event": "Freelance commissions and store",
+      "detail": "Built a creative practice around custom visuals, branding, illustration, and digital products."
+    },
+    {
+      "year": "2023",
+      "event": "Computer Science and Digital Media",
+      "detail": "Combined technical study with creative media practice across design, code, and visual storytelling."
+    }
+  ],
+  "marqueeItems": [
+    "Digital Art",
+    "Branding",
+    "Illustration",
+    "Web",
+    "Commissions",
+    "Queer Creativity",
+    "Community"
+  ]
+}

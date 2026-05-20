@@ -50,6 +50,42 @@ collections:
               - { label: "Coding Title", name: "coding_title", widget: "string" }
               - { label: "Creative Description", name: "creative_desc", widget: "string" }
               - { label: "Coding Description", name: "coding_desc", widget: "string" }
+      - file: "content/pages/about.json"
+        label: "About Page Configuration"
+        name: "about_page"
+        fields:
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
+              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
+              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
+          - { label: "Profile Image", name: "profileImage", widget: "image", required: false }
+          - label: "Tags"
+            name: "tags"
+            widget: "list"
+            field: { label: "Tag", name: "tag", widget: "string" }
+          - label: "Disciplines/Skills"
+            name: "disciplines"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Level (%)", name: "level", widget: "number", value_type: "int", min: 0, max: 100 }
+          - label: "Timeline"
+            name: "timeline"
+            widget: "list"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Event", name: "event", widget: "string" }
+              - { label: "Detail", name: "detail", widget: "text" }
+          - label: "Marquee Items"
+            name: "marqueeItems"
+            widget: "list"
+            field: { label: "Item", name: "item", widget: "string" }
 
   - name: "projects"
     label: "Projects"
@@ -117,6 +153,29 @@ collections:
           - { label: "Caption", name: "caption", widget: "string", required: false }
           - { label: "Alt Text", name: "altText", widget: "string", required: false }
       - { label: "Body", name: "body", widget: "markdown", hint: "Main article content. Use markdown for headings, lists, and inline images." }
+
+  - name: "portfolio"
+    label: "Portfolio Page"
+    files:
+      - file: "content/pages/portfolio.json"
+        label: "Portfolio Page Configuration"
+        name: "portfolio_page"
+        fields:
+          - label: "Page Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Background Type", name: "backgroundType", widget: "select", options: ["pattern", "image", "color"], default: "pattern" }
+              - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
+              - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "plasma" }
+          - label: "Built From Real Work Section"
+            name: "builtFromRealWork"
+            widget: "object"
+            fields:
+              - { label: "Headline", name: "headline", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
 
   - name: "journal"
     label: "Blog / Journal"
