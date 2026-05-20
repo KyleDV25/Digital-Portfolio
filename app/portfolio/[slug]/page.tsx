@@ -117,7 +117,7 @@ export default function ProjectPage({ params }: Props) {
               <div key={`video-${index}`} className="mb-8">
                 <VideoPlayer
                   src={item.video || item.videoUrl || ""}
-                  poster={item.posterImage}
+                  poster={item.posterImage ? `/assets/uploads/${item.posterImage}` : undefined}
                   caption={item.caption}
                   accent="volt"
                 />

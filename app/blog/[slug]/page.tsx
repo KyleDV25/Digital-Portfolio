@@ -46,7 +46,7 @@ export default function BlogPostPage({ params }: Props) {
         </div>
 
         <div className="relative aspect-[21/9] overflow-hidden">
-          <Image src="/assets/uploads/redesign.png" alt={post.title} fill priority className="object-cover" />
+          <Image src={post.featuredImage ? `/assets/uploads/${post.featuredImage}` : "/assets/uploads/redesign.png"} alt={post.title} fill priority className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-b from-void/20 to-transparent" />
         </div>
       </section>
@@ -79,7 +79,7 @@ export default function BlogPostPage({ params }: Props) {
               <div key={`video-${index}`} className="mb-8">
                 <VideoPlayer
                   src={item.video || item.videoUrl || ""}
-                  poster={item.posterImage}
+                  poster={item.posterImage ? `/assets/uploads/${item.posterImage}` : undefined}
                   caption={item.caption}
                   accent="volt"
                 />

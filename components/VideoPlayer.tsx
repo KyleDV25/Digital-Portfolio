@@ -136,7 +136,7 @@ export function VideoPlayer({ src, poster, caption, accent = "volt" }: Props) {
 
         {!isPlaying && poster && (
           <div className="absolute inset-0">
-            <Image src={poster} alt="Video poster" fill className="object-cover" />
+            <Image src={poster.startsWith('/') ? poster : `/assets/uploads/${poster}`} alt="Video poster" fill className="object-cover" />
             <div className="absolute inset-0 bg-void/30" />
           </div>
         )}

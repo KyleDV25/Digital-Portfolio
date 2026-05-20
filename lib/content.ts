@@ -45,6 +45,7 @@ export type JournalPost = {
   title: string;
   slug: string;
   date: string;
+  featuredImage?: string;
   excerpt: string;
   tags: string[];
   body: string;

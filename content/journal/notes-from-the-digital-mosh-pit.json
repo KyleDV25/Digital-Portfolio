@@ -2,31 +2,32 @@
   "title": "Notes From The Digital Mosh Pit",
   "slug": "notes-from-the-digital-mosh-pit",
   "date": "2026-01-01",
+  "featuredImage": "redesign.png",
   "excerpt": "A working note on building visuals that feel emotional, accessible, and confrontational.",
   "tags": ["process", "design", "queer-tech"],
   "body": "The portfolio treats typography as atmosphere, navigation as rhythm, and case studies as evidence of care.",
   "mediaGallery": [
     {
       "type": "image",
-      "image": "/assets/uploads/redesign.png",
+      "image": "redesign.png",
       "caption": "Early wireframe exploration for the portfolio redesign",
       "altText": "Wireframe showing portfolio layout structure"
     },
     {
       "type": "image",
-      "image": "/assets/uploads/capture-2.png",
+      "image": "capture-2.png",
       "caption": "Typography system testing with variable fonts",
       "altText": "Typography scale and hierarchy examples"
     },
     {
       "type": "image",
-      "image": "/assets/uploads/redesign.png",
+      "image": "redesign.png",
       "caption": "Color palette development with neon accents",
       "altText": "Color palette swatches and combinations"
     },
     {
       "type": "image",
-      "image": "/assets/uploads/capture-2.png",
+      "image": "capture-2.png",
       "caption": "Component library for reusable UI elements",
       "altText": "UI component examples and variations"
     }
