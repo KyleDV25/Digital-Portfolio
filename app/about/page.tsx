@@ -6,7 +6,7 @@ import { MarqueeBar } from "@/components/MarqueeBar";
 import { MagneticButton } from "@/components/MagneticButton";
 import { GlitchText } from "@/components/GlitchText";
 import { PageHero } from "@/components/PageHero";
-import { getAboutData, getPageHero, renderMarkdown } from "@/lib/content";
+import { renderMarkdown } from "@/lib/content";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import aboutPageConfig from "@/content/pages/about.json";
 
@@ -16,8 +16,6 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
-  const about = getAboutData();
-  const heroConfig = getPageHero("about");
   const pageConfig = aboutPageConfig;
 
   return (
@@ -64,7 +62,7 @@ export default function AboutPage() {
               Bold visuals with code behind them.
             </TextReveal>
 
-            <MarkdownRenderer content={renderMarkdown(about.bio.slice(0, 4).join("\n\n"))} className="mb-12" />
+            <MarkdownRenderer content={renderMarkdown(pageConfig.bio?.slice(0, 4).map((b: any) => b.text).join("\n\n") || "")} className="mb-12" />
 
             <div className="flex flex-wrap gap-2 mb-10">
               {pageConfig.tags?.map((tag) => (

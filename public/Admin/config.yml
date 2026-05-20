@@ -24,6 +24,7 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Image", name: "image", widget: "image" }
+              - { label: "Summary", name: "summary", widget: "text", required: false }
               - label: "Stats"
                 name: "stats"
                 widget: "list"
@@ -69,6 +70,10 @@ collections:
               - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
               - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
           - { label: "Profile Image", name: "profileImage", widget: "image" }
+          - label: "Bio Sections"
+            name: "bio"
+            widget: "list"
+            field: { label: "Bio Text (Markdown supported)", name: "text", widget: "markdown" }
           - label: "Tags"
             name: "tags"
             widget: "list"
@@ -146,31 +151,6 @@ collections:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Value", name: "value", widget: "string" }
               - { label: "Icon", name: "icon", widget: "string" }
-
-  - name: "about"
-    label: "About Content"
-    files:
-      - file: "content/about.json"
-        label: "About Bio"
-        name: "about_bio"
-        fields:
-          - { label: "Greeting", name: "greeting", widget: "string" }
-          - { label: "Name", name: "name", widget: "string" }
-          - label: "Bio Sections"
-            name: "bio"
-            widget: "list"
-            field: { label: "Bio Text (Markdown supported)", name: "text", widget: "markdown" }
-          - { label: "CTA", name: "cta", widget: "string" }
-          - label: "Highlights"
-            name: "highlights"
-            widget: "list"
-            fields:
-              - { label: "Creative Icon", name: "creative_icon", widget: "string" }
-              - { label: "Coding Icon", name: "coding_icon", widget: "string" }
-              - { label: "Creative Title", name: "creative_title", widget: "string" }
-              - { label: "Coding Title", name: "coding_title", widget: "string" }
-              - { label: "Creative Description", name: "creative_desc", widget: "string" }
-              - { label: "Coding Description", name: "coding_desc", widget: "string" }
 
   - name: "projects"
     label: "Projects"

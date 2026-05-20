@@ -192,18 +192,6 @@ export function getPageHero(pageKey: string) {
   return siteData.pageHeroes?.[pageKey] || null;
 }
 
-export function getAboutData() {
-  const about = readJson<{
-    bio?: Array<{ text: string }>;
-    highlights?: Array<Record<string, string>>;
-  }>("content/about.json", {});
-
-  return {
-    bio: (about.bio || []).map((item) => stripMarkdown(item.text)).filter(Boolean),
-    highlights: about.highlights || [],
-  };
-}
-
 export function getProjects(): Project[] {
   return readCollection<Project>("content/projects")
     .filter((project) => project.title && project.slug)

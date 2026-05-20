@@ -8,6 +8,20 @@
     "accent": "volt"
   },
   "profileImage": "147151519_1013302972491858_5842989547664541505_n-copy.jpg",
+  "bio": [
+    {
+      "text": "I'm **Kyle De Vares**, a creative digital artist with strong skills in Photoshop, branding, and illustration. I run a freelance commission service and online store, blending design and tech to deliver bold, custom visuals."
+    },
+    {
+      "text": "With a **BSc (HONS) in Computer Science & Higher National Diploma in Digital Media** from University College Jersey, plus a **BTEC in Creative Digital Media** from Highlands College Jersey, I bring both technical expertise and creative vision to every project."
+    },
+    {
+      "text": "My recent experience includes a **Web Developer Internship at IPOP Digitals** (Oct 2023 - Mar 2024), where I built and maintained responsive websites using HTML, CSS, and JavaScript, fixed bugs, and collaborated with development teams using Git and Agile methodologies."
+    },
+    {
+      "text": "When I'm not coding or designing, you'll find me enjoying **TTRP gaming, digital art, reading, sewing, and music**. Ready to grow in a collaborative, design-driven team!"
+    }
+  ],
   "tags": [
     "Photoshop",
     "Branding",
