@@ -6,31 +6,41 @@ import { MarqueeBar } from "@/components/MarqueeBar";
 import { MagneticButton } from "@/components/MagneticButton";
 import { PageHero } from "@/components/PageHero";
 
-const SUBJECTS = [
-  "Commission a project",
-  "Brand identity",
-  "Editorial / photography",
-  "Fashion film",
-  "Collaboration",
-  "Something else",
-];
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
-    // Replace with real form submission (Netlify, Formspree, etc.)
-    await new Promise((r) => setTimeout(r, 1200));
-    setSending(false);
-    setSubmitted(true);
+
+    try {
+      const formData = new FormData();
+      formData.append("form-name", "contact");
+      formData.append("name", form.name);
+      formData.append("email", form.email);
+      formData.append("subject", form.subject);
+      formData.append("message", form.message);
+
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      setSubmitted(true);
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("There was an error submitting the form. Please try again.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -71,7 +81,15 @@ export default function ContactPage() {
                 </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-10" noValidate>
+              <form
+                onSubmit={handleSubmit}
+                className="space-y-10"
+                noValidate
+                name="contact"
+                method="POST"
+                data-netlify="true"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 {/* Name */}
                 <div>
                   <label className="font-label text-[0.62rem] text-ghost tracking-widest uppercase block mb-2" htmlFor="name">
@@ -111,20 +129,16 @@ export default function ContactPage() {
                   <label className="font-label text-[0.62rem] text-ghost tracking-widest uppercase block mb-2" htmlFor="subject">
                     Subject *
                   </label>
-                  <select
+                  <input
                     id="subject"
                     name="subject"
+                    type="text"
                     required
                     value={form.subject}
                     onChange={handleChange}
-                    className="input-punk w-full bg-transparent appearance-none cursor-none"
-                    style={{ backgroundImage: "none" }}
-                  >
-                    <option value="" disabled className="bg-void">Select a subject</option>
-                    {SUBJECTS.map((s) => (
-                      <option key={s} value={s} className="bg-void">{s}</option>
-                    ))}
-                  </select>
+                    placeholder="What's this about?"
+                    className="input-punk w-full"
+                  />
                 </div>
 
                 {/* Message */}
