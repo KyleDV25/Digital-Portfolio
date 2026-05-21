@@ -5,6 +5,11 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+  [plugins.inputs]
+    disable = "forms"
+
 [[headers]]
   for = "/*"
   [headers.values]
