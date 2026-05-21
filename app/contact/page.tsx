@@ -5,12 +5,14 @@ import { GlitchText } from "@/components/GlitchText";
 import { MarqueeBar } from "@/components/MarqueeBar";
 import { MagneticButton } from "@/components/MagneticButton";
 import { PageHero } from "@/components/PageHero";
+import { submitContactForm } from "./actions";
 
 
 export default function ContactPage() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -19,28 +21,23 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true);
+    setError("");
 
-    try {
-      const formData = new FormData();
-      formData.append("form-name", "contact");
-      formData.append("name", form.name);
-      formData.append("email", form.email);
-      formData.append("subject", form.subject);
-      formData.append("message", form.message);
+    const formData = new FormData();
+    formData.append("name", form.name);
+    formData.append("email", form.email);
+    formData.append("subject", form.subject);
+    formData.append("message", form.message);
 
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
-      });
+    const result = await submitContactForm(formData);
 
+    if (result.success) {
       setSubmitted(true);
-    } catch (error) {
-      console.error("Form submission error:", error);
-      alert("There was an error submitting the form. Please try again.");
-    } finally {
-      setSending(false);
+    } else {
+      setError(result.error || "Failed to submit form");
     }
+
+    setSending(false);
   };
 
   return (
@@ -85,11 +82,12 @@ export default function ContactPage() {
                 onSubmit={handleSubmit}
                 className="space-y-10"
                 noValidate
-                name="contact"
-                method="POST"
-                data-netlify="true"
               >
-                <input type="hidden" name="form-name" value="contact" />
+                {error && (
+                  <div className="bg-void/50 border border-volt text-volt px-4 py-3 font-mono text-sm">
+                    {error}
+                  </div>
+                )}
                 {/* Name */}
                 <div>
                   <label className="font-label text-[0.62rem] text-ghost tracking-widest uppercase block mb-2" htmlFor="name">
