@@ -136,8 +136,10 @@ Background types:
    - Publish directory: `.next`
    - Node version: `18`
 
-3. **Environment Variables** (if needed):
-   - No environment variables required for this setup
+3. **Environment Variables**:
+   - Add `FORMSPREE_FORM_ID` in Netlify dashboard (Site settings → Environment variables)
+   - Get your Formspree form ID from https://formspree.io/ (free account required)
+   - The contact form uses Formspree for email submissions
 
 ### Manual Deployment
 
