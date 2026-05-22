@@ -5,36 +5,40 @@ import { GlitchText } from "@/components/GlitchText";
 import { MarqueeBar } from "@/components/MarqueeBar";
 import { MagneticButton } from "@/components/MagneticButton";
 import { PageHero } from "@/components/PageHero";
-import { submitContactForm } from "./actions";
+import { clsx } from "clsx";
 
 
 export default function ContactPage() {
-  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
     setError("");
 
-    const formData = new FormData();
-    formData.append("name", form.name);
-    formData.append("email", form.email);
-    formData.append("subject", form.subject);
-    formData.append("message", form.message);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
 
-    const result = await submitContactForm(formData);
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
 
-    if (result.success) {
-      setSubmitted(true);
-    } else {
-      setError(result.error || "Failed to submit form");
+      const result = await response.json();
+
+      if (response.ok) {
+        setSubmitted(true);
+      } else {
+        setError(result.error || "Failed to submit form");
+      }
+    } catch (err) {
+      setError("Failed to submit form. Please try again.");
     }
 
     setSending(false);
@@ -59,38 +63,39 @@ export default function ContactPage() {
       />
 
       {/* Main grid */}
-      <section className="section-padding bg-ink">
-        <div className="container-punk grid grid-cols-1 lg:grid-cols-[1fr_420px] gap-16 lg:gap-20">
+      <section className={clsx('section-padding', 'bg-ink')}>
+        <div className={clsx('container-punk', 'grid', 'grid-cols-1', 'lg:grid-cols-[1fr_420px]', 'gap-16', 'lg:gap-20')}>
 
           {/* Form */}
           <div>
             {submitted ? (
-              <div className="py-20 text-center">
+              <div className={clsx('py-20', 'text-center')}>
                 <GlitchText
                   as="p"
                   mode="once"
-                  className="font-display text-[clamp(3rem,8vw,8rem)] text-volt uppercase leading-none tracking-tightest mb-8"
+                  className={clsx('font-display', 'text-[clamp(3rem,8vw,8rem)]', 'text-volt', 'uppercase', 'leading-none', 'tracking-tightest', 'mb-8')}
                 >
                   RECEIVED
                 </GlitchText>
-                <p className="font-mono text-sm text-ghost">
+                <p className={clsx('font-mono', 'text-sm', 'text-ghost')}>
                   I&apos;ll get back to you within 48 hours.
                 </p>
               </div>
             ) : (
               <form
+                action="https://formspree.io/f/xjgzyzvg"
+                method="POST"
                 onSubmit={handleSubmit}
                 className="space-y-10"
-                noValidate
               >
                 {error && (
-                  <div className="bg-void/50 border border-volt text-volt px-4 py-3 font-mono text-sm">
+                  <div className={clsx('bg-void/50', 'border', 'border-volt', 'text-volt', 'px-4', 'py-3', 'font-mono', 'text-sm')}>
                     {error}
                   </div>
                 )}
                 {/* Name */}
                 <div>
-                  <label className="font-label text-[0.62rem] text-ghost tracking-widest uppercase block mb-2" htmlFor="name">
+                  <label className={clsx('font-label', 'text-[0.62rem]', 'text-ghost', 'tracking-widest', 'uppercase', 'block', 'mb-2')} htmlFor="name">
                     Your name *
                   </label>
                   <input
@@ -98,16 +103,14 @@ export default function ContactPage() {
                     name="name"
                     type="text"
                     required
-                    value={form.name}
-                    onChange={handleChange}
                     placeholder="As you'd like to be addressed"
-                    className="input-punk w-full"
+                    className={clsx('input-punk', 'w-full')}
                   />
                 </div>
 
                 {/* Email */}
                 <div>
-                  <label className="font-label text-[0.62rem] text-ghost tracking-widest uppercase block mb-2" htmlFor="email">
+                  <label className={clsx('font-label', 'text-[0.62rem]', 'text-ghost', 'tracking-widest', 'uppercase', 'block', 'mb-2')} htmlFor="email">
                     Email *
                   </label>
                   <input
@@ -115,16 +118,14 @@ export default function ContactPage() {
                     name="email"
                     type="email"
                     required
-                    value={form.email}
-                    onChange={handleChange}
                     placeholder="your@email.com"
-                    className="input-punk w-full"
+                    className={clsx('input-punk', 'w-full')}
                   />
                 </div>
 
                 {/* Subject */}
                 <div>
-                  <label className="font-label text-[0.62rem] text-ghost tracking-widest uppercase block mb-2" htmlFor="subject">
+                  <label className={clsx('font-label', 'text-[0.62rem]', 'text-ghost', 'tracking-widest', 'uppercase', 'block', 'mb-2')} htmlFor="subject">
                     Subject *
                   </label>
                   <input
@@ -132,27 +133,23 @@ export default function ContactPage() {
                     name="subject"
                     type="text"
                     required
-                    value={form.subject}
-                    onChange={handleChange}
                     placeholder="What's this about?"
-                    className="input-punk w-full"
+                    className={clsx('input-punk', 'w-full')}
                   />
                 </div>
 
                 {/* Message */}
                 <div>
-                  <label className="font-label text-[0.62rem] text-ghost tracking-widest uppercase block mb-2" htmlFor="message">
+                  <label className={clsx('font-label', 'text-[0.62rem]', 'text-ghost', 'tracking-widest', 'uppercase', 'block', 'mb-2')} htmlFor="message">
                     Message *
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
-                    value={form.message}
-                    onChange={handleChange}
                     placeholder="Tell me about your project, timeline, and budget..."
                     rows={6}
-                    className="input-punk textarea-punk w-full"
+                    className={clsx('input-punk', 'textarea-punk', 'w-full')}
                   />
                 </div>
 
@@ -161,7 +158,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={sending}
-                    className="btn-punk relative"
+                    className={clsx('btn-punk', 'relative')}
                     aria-disabled={sending}
                   >
                     <span>{sending ? "Sending..." : "Send message"}</span>
@@ -177,36 +174,36 @@ export default function ContactPage() {
           </div>
 
           {/* Sidebar info */}
-          <aside className="space-y-10 border-t border-smoke pt-10 lg:border-t-0 lg:pt-0 lg:border-l lg:pl-10 lg:border-smoke">
+          <aside className={clsx('space-y-10', 'border-t', 'border-smoke', 'pt-10', 'lg:border-t-0', 'lg:pt-0', 'lg:border-l', 'lg:pl-10', 'lg:border-smoke')}>
             <div>
-              <p className="font-label text-[0.62rem] text-volt tracking-widest uppercase mb-4">Direct email</p>
+              <p className={clsx('font-label', 'text-[0.62rem]', 'text-volt', 'tracking-widest', 'uppercase', 'mb-4')}>Direct email</p>
               <a
                 href="mailto:kyledevares025@gmail.com"
-                className="font-mono text-[clamp(1rem,2.5vw,1.25rem)] text-chalk hover:text-volt transition-colors duration-300 text-wrap"
+                className={clsx('font-mono', 'text-[clamp(1rem,2.5vw,1.25rem)]', 'text-chalk', 'hover:text-volt', 'transition-colors', 'duration-300', 'text-wrap')}
                 data-hover
               >
                 kyledevares025@gmail.com
               </a>
             </div>
 
-            <div className="border-t border-smoke pt-8">
-              <p className="font-label text-[0.62rem] text-ghost tracking-widest uppercase mb-4">Response time</p>
-              <p className="font-mono text-sm text-ghost">Within 48 hours, usually sooner.</p>
+            <div className={clsx('border-t', 'border-smoke', 'pt-8')}>
+              <p className={clsx('font-label', 'text-[0.62rem]', 'text-ghost', 'tracking-widest', 'uppercase', 'mb-4')}>Response time</p>
+              <p className={clsx('font-mono', 'text-sm', 'text-ghost')}>Within 48 hours, usually sooner.</p>
             </div>
 
-            <div className="border-t border-smoke pt-8">
-              <p className="font-label text-[0.62rem] text-ghost tracking-widest uppercase mb-4">Availability</p>
-              <div className="flex items-center gap-3">
-                <span className="w-2 h-2 rounded-full bg-volt animate-pulse-neon" />
-                <p className="font-mono text-sm text-volt">Currently open for projects</p>
+            <div className={clsx('border-t', 'border-smoke', 'pt-8')}>
+              <p className={clsx('font-label', 'text-[0.62rem]', 'text-ghost', 'tracking-widest', 'uppercase', 'mb-4')}>Availability</p>
+              <div className={clsx('flex', 'items-center', 'gap-3')}>
+                <span className={clsx('w-2', 'h-2', 'rounded-full', 'bg-volt', 'animate-pulse-neon')} />
+                <p className={clsx('font-mono', 'text-sm', 'text-volt')}>Currently open for projects</p>
               </div>
-              <p className="font-mono text-sm text-ghost mt-3">
+              <p className={clsx('font-mono', 'text-sm', 'text-ghost', 'mt-3')}>
                 Taking commissions and collaborations now.
               </p>
             </div>
 
-            <div className="border-t border-smoke pt-8">
-              <p className="font-label text-[0.62rem] text-ghost tracking-widest uppercase mb-5">Socials</p>
+            <div className={clsx('border-t', 'border-smoke', 'pt-8')}>
+              <p className={clsx('font-label', 'text-[0.62rem]', 'text-ghost', 'tracking-widest', 'uppercase', 'mb-5')}>Socials</p>
               <div className="space-y-3">
                 {[
                   { label: "Instagram", href: "#", accent: "hover:text-plasma" },
