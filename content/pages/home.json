@@ -1,7 +1,7 @@
 {
   "hero": {
-    "title": "DIGITAL",
-    "subtitle": "ARTIST",
+    "title": "DESIGNER",
+    "subtitle": "& DEVELOPER",
     "eyebrow": "Kyle De Vares",
     "backgroundType": "pattern",
     "background": "#CAFF00",
@@ -11,7 +11,7 @@
   "aboutSection": {
     "title": "Design, Code, And Loud Visuals.",
     "image": "/assets/uploads/bw-headshot-photo.jpg",
-    "summary": "I'm Kyle De Vares, a creative digital artist with strong skills in Photoshop, branding, and illustration. I run a freelance commission service and online store, blending design and tech to deliver bold, custom visuals.",
+    "summary": "I’m Kyle De Vares, a multidisciplinary digital designer with experience in branding, illustration, web development, and creative media. From visual identity and digital artwork to coding interactive projects, I combine creativity and technical skills to build engaging digital experiences. I’m always exploring new tools, styles, and creative approaches that push my work further.",
     "stats": [
       {
         "label": "Projects",
