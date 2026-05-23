@@ -1,0 +1,47 @@
+{
+  "brandName": "KYLE",
+  "brandDescription": "Creative digital artist building bold custom visuals, identity work, web experiments, and commission-ready design.",
+  "ctaHeadline": "Let's make something unforgettable",
+  "ctaLabel": "Start a project",
+  "navLinks": [
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Portfolio",
+      "href": "/portfolio"
+    },
+    {
+      "label": "Journal",
+      "href": "/blog"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "socialLinks": [
+    {
+      "label": "Instagram",
+      "short": "IG",
+      "url": "#"
+    },
+    {
+      "label": "LinkedIn",
+      "short": "LI",
+      "url": "#"
+    },
+    {
+      "label": "Bear Spirits Arts",
+      "short": "BA",
+      "url": "#"
+    },
+    {
+      "label": "GitHub",
+      "short": "GH",
+      "url": "#"
+    }
+  ],
+  "copyright": "Built with rebellion & Next.js"
+}

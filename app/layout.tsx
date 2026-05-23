@@ -5,9 +5,11 @@ import { LoadingScreen } from "@/components/LoadingScreen";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
-import { getSiteData } from "@/lib/content";
+import { getSiteData, getNavigationData, getFooterData } from "@/lib/content";
 
 const site = getSiteData();
+const navigationData = getNavigationData();
+const footerData = getFooterData();
 
 export const metadata: Metadata = {
   title: {
@@ -54,9 +56,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LoadingScreen />
         <CustomCursor />
         <SmoothScrollProvider>
-          <Navigation />
+          <Navigation navigationData={navigationData} />
           <main>{children}</main>
-          <Footer />
+          <Footer footerData={footerData} />
         </SmoothScrollProvider>
       </body>
     </html>

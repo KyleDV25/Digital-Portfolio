@@ -188,6 +188,60 @@ export function getSiteData(): SiteData {
   };
 }
 
+export function getNavigationData() {
+  const navConfig = readJson<{
+    brandName?: string;
+    brandSubtitle?: string;
+    links?: Array<{ label: string; href: string }>;
+    cta?: { label: string; href: string };
+  }>("content/settings/navigation.json", {});
+
+  return {
+    brandName: navConfig.brandName || "KYLE",
+    brandSubtitle: navConfig.brandSubtitle || "Digital Artist",
+    links: navConfig.links || [
+      { label: "Home", href: "/" },
+      { label: "About", href: "/about" },
+      { label: "Work", href: "/portfolio" },
+      { label: "Journal", href: "/blog" },
+      { label: "Contact", href: "/contact" },
+    ],
+    cta: navConfig.cta || { label: "Let's Talk", href: "/contact" },
+  };
+}
+
+export function getFooterData() {
+  const footerConfig = readJson<{
+    brandName?: string;
+    brandDescription?: string;
+    ctaHeadline?: string;
+    ctaLabel?: string;
+    navLinks?: Array<{ label: string; href: string }>;
+    socialLinks?: Array<{ label: string; short: string; url: string }>;
+    copyright?: string;
+  }>("content/settings/footer.json", {});
+
+  return {
+    brandName: footerConfig.brandName || "KYLE",
+    brandDescription: footerConfig.brandDescription || "Creative digital artist building bold custom visuals, identity work, web experiments, and commission-ready design.",
+    ctaHeadline: footerConfig.ctaHeadline || "Let's make something unforgettable",
+    ctaLabel: footerConfig.ctaLabel || "Start a project",
+    navLinks: footerConfig.navLinks || [
+      { label: "About", href: "/about" },
+      { label: "Portfolio", href: "/portfolio" },
+      { label: "Journal", href: "/blog" },
+      { label: "Contact", href: "/contact" },
+    ],
+    socialLinks: footerConfig.socialLinks || [
+      { label: "Instagram", short: "IG", url: "#" },
+      { label: "LinkedIn", short: "LI", url: "#" },
+      { label: "Bear Spirits Arts", short: "BA", url: "#" },
+      { label: "GitHub", short: "GH", url: "#" },
+    ],
+    copyright: footerConfig.copyright || "Built with rebellion & Next.js",
+  };
+}
+
 export function getPageHero(pageKey: string) {
   const siteData = getSiteData();
   return siteData.pageHeroes?.[pageKey] || null;

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import gsap from "gsap";
@@ -26,9 +26,19 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
   const heroRef = useRef<HTMLDivElement>(null);
   const heroImgRef = useRef<HTMLDivElement>(null);
   const aboutImgRef = useRef<HTMLDivElement>(null);
-  const featuredProjects = projects.slice(0, 4);
-  const pageConfig = homePageConfig;
+  const [expandedWhatIDo, setExpandedWhatIDo] = useState<number | null>(null);
+  const pageConfig = homePageConfig as any;
   const heroImage = pageConfig.hero.heroImage ? (pageConfig.hero.heroImage.startsWith('/') ? pageConfig.hero.heroImage : `/assets/uploads/${pageConfig.hero.heroImage}`) : "/assets/uploads/redesign.png";
+  
+  // Use featured project IDs if provided, otherwise use recent projects
+  const featuredProjects = pageConfig.featuredProjectIds && pageConfig.featuredProjectIds.length > 0
+    ? projects.filter(p => pageConfig.featuredProjectIds.includes(p.slug)).slice(0, 4)
+    : projects.slice(0, 4);
+  
+  // Split hero name into title and subtitle
+  const heroNameParts = (pageConfig.heroName || "Kyle De Vares").split(' ');
+  const heroTitle = heroNameParts[0] || "KYLE";
+  const heroSubtitle = heroNameParts.slice(1).join(' ') || "DE VARES";
 
   useEffect(() => {
     const heroImg = heroImgRef.current;
@@ -104,7 +114,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
 
         <div className="relative z-10 container-punk pb-16 lg:pb-24">
           <div className="section-eyebrow mb-6 opacity-0 animate-[fadeIn_0.6s_1.6s_forwards]">
-            Creative Digital Artist
+            {pageConfig.heroEyebrow || "Creative Digital Artist"}
           </div>
 
           <div className="overflow-hidden mb-4">
@@ -113,17 +123,17 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
               mode="hover"
               className="text-[clamp(4.5rem,14vw,16rem)] leading-none tracking-tightest text-chalk block"
             >
-              KYLE
+              {heroTitle.toUpperCase()}
             </GlitchText>
           </div>
           <div className="overflow-hidden mb-10">
             <h1 className="font-display text-[clamp(4.5rem,14vw,16rem)] leading-none tracking-tightest text-stroke-paper block">
-              DE VARES
+              {heroSubtitle.toUpperCase()}
             </h1>
           </div>
 
           <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8">
-            <p className="font-mono text-ghost text-sm max-w-sm leading-relaxed text-wrap">{site.description}</p>
+            <p className="font-mono text-ghost text-sm max-w-sm leading-relaxed text-wrap">{pageConfig.heroDescription || site.description}</p>
             <div className="flex flex-wrap items-center gap-4">
               <MagneticButton>
                 <Link href="/portfolio" className="btn-punk">
@@ -148,7 +158,7 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
       </section>
 
       <MarqueeBar
-        items={["Branding", "Illustration", "Web", "Queer Culture", "Digital Media", "Commissions", "Community"]}
+        items={pageConfig.marqueeText || ["Branding", "Illustration", "Web", "Queer Culture", "Digital Media", "Commissions", "Community"]}
         accent="volt"
       />
 
@@ -224,17 +234,24 @@ export function HomePageClient({ site, aboutSummary, projects, posts }: Props) {
         <div className="container-punk">
           <p className="section-eyebrow mb-8">What I do</p>
           <ul className="divide-y divide-smoke" role="list">
-            {pageConfig.disciplines?.map((discipline: string, i: number) => (
-              <li
-                key={discipline}
-                className="group flex items-center justify-between py-5 lg:py-7 cursor-default hover:bg-ash transition-colors duration-200 px-0 hover:px-4"
-              >
-                <span className="font-display text-[clamp(1.8rem,5vw,4.5rem)] text-chalk group-hover:text-volt transition-colors duration-300 leading-none tracking-tightest uppercase">
-                  {discipline}
-                </span>
-                <span className="font-label text-[0.6rem] text-ghost tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  0{i + 1}
-                </span>
+            {pageConfig.whatIDo?.map((item: any, i: number) => (
+              <li key={i}>
+                <button
+                  onClick={() => setExpandedWhatIDo(expandedWhatIDo === i ? null : i)}
+                  className="w-full group flex items-center justify-between py-5 lg:py-7 hover:bg-ash transition-colors duration-200 px-0 hover:px-4 text-left"
+                >
+                  <span className="font-display text-[clamp(1.8rem,5vw,4.5rem)] text-chalk group-hover:text-volt transition-colors duration-300 leading-none tracking-tightest uppercase">
+                    {item.label}
+                  </span>
+                  <span className="font-label text-[0.6rem] text-ghost tracking-widest opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    0{i + 1}
+                  </span>
+                </button>
+                {expandedWhatIDo === i && (
+                  <div className="px-4 pb-5 pt-2">
+                    <p className="font-mono text-ghost text-sm leading-relaxed">{item.description}</p>
+                  </div>
+                )}
               </li>
             ))}
           </ul>

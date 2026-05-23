@@ -29,6 +29,18 @@ collections:
               - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
               - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "volt" }
               - { label: "Hero Image", name: "heroImage", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically." }
+          - { label: "Hero Name (Full Name)", name: "heroName", widget: "string", default: "Kyle De Vares", hint: "Your full name that will be displayed in the hero section" }
+          - { label: "Hero Description", name: "heroDescription", widget: "text", default: "Creative digital artist blending branding, illustration, web experiments, and queer punk visual storytelling.", hint: "Short description shown below your name in the hero section" }
+          - { label: "Hero Eyebrow", name: "heroEyebrow", widget: "string", default: "Creative Digital Artist", hint: "Small text above your name in the hero section" }
+          - label: "Marquee Text"
+            name: "marqueeText"
+            widget: "list"
+            field: { label: "Item", name: "item", widget: "string", hint: "Text that scrolls in the marquee bar" }
+          - label: "Featured Project IDs"
+            name: "featuredProjectIds"
+            widget: "list"
+            required: false
+            field: { label: "Project Slug", name: "slug", widget: "string", hint: "Enter the slug of projects to feature on homepage (leave empty to show recent projects)" }
           - label: "About Section"
             name: "aboutSection"
             widget: "object"
@@ -50,10 +62,12 @@ collections:
               - { label: "Description", name: "description", widget: "text" }
               - { label: "CTA Label", name: "ctaLabel", widget: "string" }
               - { label: "CTA Link", name: "ctaLink", widget: "string" }
-          - label: "Disciplines"
-            name: "disciplines"
+          - label: "What I Do"
+            name: "whatIDo"
             widget: "list"
-            field: { label: "Discipline", name: "discipline", widget: "string" }
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
           - label: "Contact Section"
             name: "contactSection"
             widget: "object"
@@ -333,177 +347,64 @@ collections:
   - name: "settings"
     label: "Settings"
     files:
-      - file: "content/settings/site.json"
-        label: "Site Content"
-        name: "site"
+      - file: "content/settings/navigation.json"
+        label: "Navigation"
+        name: "navigation"
         fields:
-          - label: "Meta"
-            name: "meta"
-            widget: "object"
-            fields:
-              - { label: "Site Title", name: "title", widget: "string" }
-              - { label: "Site Description", name: "description", widget: "text" }
-              - { label: "Author", name: "author", widget: "string" }
-          - label: "Branding"
-            name: "branding"
-            widget: "object"
-            fields:
-              - { label: "Brand Name", name: "name", widget: "string" }
-              - { label: "Brand Description", name: "description", widget: "text" }
-              - { label: "Profile Image", name: "profileImage", widget: "image" }
-          - label: "Navigation"
-            name: "navigation"
+          - label: "Brand Name"
+            name: "brandName"
+            widget: "string"
+            default: "KYLE"
+          - label: "Brand Subtitle"
+            name: "brandSubtitle"
+            widget: "string"
+            default: "Digital Artist"
+          - label: "Navigation Links"
+            name: "links"
             widget: "list"
             fields:
               - { label: "Label", name: "label", widget: "string" }
               - { label: "Href", name: "href", widget: "string" }
-          - label: "Hero Section"
-            name: "hero"
+          - label: "CTA Button"
+            name: "cta"
             widget: "object"
             fields:
-              - { label: "Headline", name: "headline", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Primary CTA"
-                name: "primaryCta"
-                widget: "object"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Href", name: "href", widget: "string" }
-              - label: "Secondary CTA"
-                name: "secondaryCta"
-                widget: "object"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Href", name: "href", widget: "string" }
-          - label: "About Section"
-            name: "about"
-            widget: "object"
+              - { label: "Label", name: "label", widget: "string", default: "Let's Talk" }
+              - { label: "Href", name: "href", widget: "string", default: "/contact" }
+      - file: "content/settings/footer.json"
+        label: "Footer"
+        name: "footer"
+        fields:
+          - label: "Brand Name"
+            name: "brandName"
+            widget: "string"
+            default: "KYLE"
+          - label: "Brand Description"
+            name: "brandDescription"
+            widget: "text"
+            default: "Creative digital artist building bold custom visuals, identity work, web experiments, and commission-ready design."
+          - label: "CTA Headline"
+            name: "ctaHeadline"
+            widget: "string"
+            default: "Let's make something unforgettable"
+          - label: "CTA Button Label"
+            name: "ctaLabel"
+            widget: "string"
+            default: "Start a project"
+          - label: "Navigation Links"
+            name: "navLinks"
+            widget: "list"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Body", name: "body", widget: "text" }
-              - { label: "Image", name: "image", widget: "image" }
-          - label: "Projects Section"
-            name: "projectsSection"
-            widget: "object"
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Href", name: "href", widget: "string" }
+          - label: "Social Links"
+            name: "socialLinks"
+            widget: "list"
             fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Filters"
-                name: "filters"
-                widget: "list"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Value", name: "value", widget: "string" }
-              - label: "Section CTA"
-                name: "cta"
-                widget: "object"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Href", name: "href", widget: "string" }
-          - label: "Projects Page"
-            name: "projectsPage"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-          - label: "Skills Section"
-            name: "skillsSection"
-            widget: "object"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - label: "Skill Groups"
-                name: "groups"
-                widget: "list"
-                fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Icon", name: "icon", widget: "select", options: ["design", "development", "marketing"] }
-                  - { label: "Accent Class", name: "accentClass", widget: "string", required: false, hint: "Example: bg-blue-100 text-custom-blue-600" }
-                  - label: "Items"
-                    name: "items"
-                    widget: "list"
-                    field: { label: "Item", name: "item", widget: "string" }
-          - label: "Timeline Section"
-            name: "timelineSection"
-            widget: "object"
-            fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Timeline Items"
-                name: "items"
-                widget: "list"
-                fields:
-                  - { label: "Period", name: "period", widget: "string" }
-                  - { label: "Role", name: "role", widget: "string" }
-                  - { label: "Company", name: "company", widget: "string" }
-                  - { label: "Description", name: "description", widget: "text" }
-          - label: "Contact Section"
-            name: "contactSection"
-            widget: "object"
-            fields:
-              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Intro Title", name: "introTitle", widget: "string" }
-              - { label: "Intro Body", name: "introBody", widget: "text" }
-              - { label: "Availability Badge", name: "availabilityBadge", widget: "string" }
-              - label: "Contact Details"
-                name: "details"
-                widget: "list"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Value", name: "value", widget: "string" }
-                  - { label: "Href", name: "href", widget: "string", required: false }
-                  - { label: "Icon", name: "icon", widget: "select", options: ["email", "phone", "location"] }
-              - label: "Contact Stats"
-                name: "stats"
-                widget: "list"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Value", name: "value", widget: "string" }
-              - label: "Social Links"
-                name: "socialLinks"
-                widget: "list"
-                fields:
-                  - { label: "Platform", name: "platform", widget: "string" }
-                  - { label: "URL", name: "url", widget: "string" }
-                  - { label: "Icon", name: "icon", widget: "select", options: ["twitter", "linkedin", "instagram"] }
-              - label: "Contact Form"
-                name: "form"
-                widget: "object"
-                fields:
-                  - { label: "Eyebrow", name: "eyebrow", widget: "string" }
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Note", name: "note", widget: "text" }
-                  - { label: "Helper Text", name: "helper", widget: "text" }
-                  - { label: "Name Label", name: "nameLabel", widget: "string" }
-                  - { label: "Name Placeholder", name: "namePlaceholder", widget: "string" }
-                  - { label: "Email Label", name: "emailLabel", widget: "string" }
-                  - { label: "Email Placeholder", name: "emailPlaceholder", widget: "string" }
-                  - { label: "Subject Label", name: "subjectLabel", widget: "string" }
-                  - { label: "Subject Placeholder", name: "subjectPlaceholder", widget: "string" }
-                  - { label: "Message Label", name: "messageLabel", widget: "string" }
-                  - { label: "Message Placeholder", name: "messagePlaceholder", widget: "text" }
-                  - { label: "Submit Label", name: "submitLabel", widget: "string" }
-          - label: "Footer"
-            name: "footer"
-            widget: "object"
-            fields:
-              - { label: "Description", name: "description", widget: "text" }
-              - label: "Quick Links"
-                name: "quickLinks"
-                widget: "list"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Href", name: "href", widget: "string" }
-              - label: "Services"
-                name: "services"
-                widget: "list"
-                field: { label: "Service", name: "service", widget: "string" }
-              - label: "Legal Links"
-                name: "legalLinks"
-                widget: "list"
-                fields:
-                  - { label: "Label", name: "label", widget: "string" }
-                  - { label: "Href", name: "href", widget: "string" }
-              - { label: "Copyright", name: "copyright", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Short Code", name: "short", widget: "string", hint: "2-3 character code (e.g., IG, LI, GH)" }
+              - { label: "URL", name: "url", widget: "string" }
+          - label: "Copyright Text"
+            name: "copyright"
+            widget: "string"
+            default: "Built with rebellion & Next.js"

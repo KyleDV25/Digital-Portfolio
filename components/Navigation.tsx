@@ -7,20 +7,37 @@ import gsap from "gsap";
 import { MagneticButton } from "@/components/MagneticButton";
 import clsx from "clsx";
 
-const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/portfolio", label: "Work" },
-  { href: "/blog", label: "Journal" },
-  { href: "/contact", label: "Contact" },
-];
+type NavigationData = {
+  brandName: string;
+  brandSubtitle: string;
+  links: Array<{ label: string; href: string }>;
+  cta: { label: string; href: string };
+};
 
-export function Navigation() {
+type Props = {
+  navigationData?: NavigationData;
+};
+
+const DEFAULT_NAV_DATA: NavigationData = {
+  brandName: "KYLE",
+  brandSubtitle: "Digital Artist",
+  links: [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/portfolio", label: "Work" },
+    { href: "/blog", label: "Journal" },
+    { href: "/contact", label: "Contact" },
+  ],
+  cta: { label: "Let's Talk", href: "/contact" },
+};
+
+export function Navigation({ navigationData }: Props) {
   const navRef = useRef<HTMLElement>(null);
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
+  const navData = navigationData || DEFAULT_NAV_DATA;
 
   // Scroll detection
   useEffect(() => {
@@ -75,17 +92,17 @@ export function Navigation() {
           {/* Brand */}
           <Link href="/" className={clsx('group', 'flex', 'items-center', 'gap-3')} aria-label="Home">
             <span className={clsx('font-display', 'text-xl', 'text-volt', 'tracking-widest', 'group-hover:glow-volt', 'transition-all', 'duration-300')}>
-              KYLE
+              {navData.brandName}
             </span>
             <span className={clsx('w-px', 'h-5', 'bg-smoke')} />
             <span className={clsx('font-label', 'text-[0.6rem]', 'text-ghost', 'tracking-widest', 'uppercase', 'leading-tight')}>
-              Digital<br />Artist
+              {navData.brandSubtitle}
             </span>
           </Link>
 
           {/* Desktop links */}
           <ul className={clsx('hidden', 'lg:flex', 'items-center', 'gap-8')} role="list">
-            {NAV_LINKS.map(({ href, label }) => (
+            {navData.links.map(({ href, label }) => (
               <li key={href}>
                 <Link
                   href={href}
@@ -101,8 +118,8 @@ export function Navigation() {
           {/* CTA */}
           <div className={clsx('hidden', 'lg:block')}>
             <MagneticButton>
-              <Link href="/contact" className="btn-punk">
-                <span>Let&apos;s Talk</span>
+              <Link href={navData.cta.href} className="btn-punk">
+                <span>{navData.cta.label}</span>
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.5" />
                 </svg>
@@ -143,7 +160,7 @@ export function Navigation() {
           className={clsx('lg:hidden', 'fixed', 'inset-0', 'bg-void/95', 'backdrop-blur-md', 'z-[99999]', 'flex', 'flex-col', 'px-8', 'pt-12', 'pb-8', 'overflow-y-auto')}
         >
           <ul className={clsx('flex', 'flex-col', 'gap-2')} role="list">
-            {NAV_LINKS.map(({ href, label }, i) => (
+            {navData.links.map(({ href, label }, i) => (
               <li key={href}>
                 <Link
                   href={href}

@@ -1,4 +1,4 @@
-{
+﻿{
   "hero": {
     "title": "DESIGNER",
     "subtitle": "& DEVELOPER",
@@ -8,6 +8,19 @@
     "accent": "volt",
     "heroImage": "/assets/uploads/gemini_generated_image_7mhk0l7mhk0l7mhk.png"
   },
+  "heroName": "Kyle De Vares",
+  "heroDescription": "Creative digital artist blending branding, illustration, web experiments, and queer punk visual storytelling.",
+  "heroEyebrow": "Creative Digital Artist",
+  "marqueeText": [
+    "Branding",
+    "Illustration",
+    "Web",
+    "Queer Culture",
+    "Digital Media",
+    "Commissions",
+    "Community"
+  ],
+  "featuredProjectIds": [],
   "aboutSection": {
     "title": "Design, Code, And Loud Visuals.",
     "image": "/assets/uploads/bw-headshot-photo.jpg",
@@ -33,13 +46,31 @@
     "ctaLabel": "View All Projects",
     "ctaLink": "/portfolio"
   },
-  "disciplines": [
-    "Digital Art",
-    "Brand Identity",
-    "Web Experiments",
-    "Illustration",
-    "Community Tools",
-    "Visual Storytelling"
+  "whatIDo": [
+    {
+      "label": "Digital Art",
+      "description": "Creating bold visual artwork with digital tools and techniques"
+    },
+    {
+      "label": "Brand Identity",
+      "description": "Building cohesive brand systems that tell your story"
+    },
+    {
+      "label": "Web Experiments",
+      "description": "Pushing the boundaries of web design and interactivity"
+    },
+    {
+      "label": "Illustration",
+      "description": "Custom illustrations for any medium or purpose"
+    },
+    {
+      "label": "Community Tools",
+      "description": "Building digital spaces that bring people together"
+    },
+    {
+      "label": "Visual Storytelling",
+      "description": "Crafting narratives through visual design and composition"
+    }
   ],
   "contactSection": {
     "headline": "Got a vision?",

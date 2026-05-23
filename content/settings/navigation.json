@@ -1,0 +1,30 @@
+{
+  "brandName": "KYLE",
+  "brandSubtitle": "Digital Artist",
+  "links": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "About",
+      "href": "/about"
+    },
+    {
+      "label": "Work",
+      "href": "/portfolio"
+    },
+    {
+      "label": "Journal",
+      "href": "/blog"
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "cta": {
+    "label": "Let's Talk",
+    "href": "/contact"
+  }
+}
