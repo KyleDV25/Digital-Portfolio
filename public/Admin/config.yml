@@ -95,10 +95,7 @@ collections:
               - { label: "Background Color/Pattern", name: "background", widget: "string", required: false }
               - { label: "Accent Color", name: "accent", widget: "select", options: ["volt", "plasma", "chalk"], default: "plasma" }
           - { label: "Profile Image", name: "profileImage", widget: "image", required: false, hint: "Upload image. The CMS will handle the path automatically." }
-          - label: "Bio Sections"
-            name: "bio"
-            widget: "list"
-            field: { label: "Bio Text (Markdown supported)", name: "text", widget: "markdown" }
+          - { label: "Bio", name: "bio", widget: "markdown", hint: "Your bio text - use double line breaks for paragraphs" }
           - label: "Tags"
             name: "tags"
             widget: "list"
