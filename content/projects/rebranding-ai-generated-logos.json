@@ -1,34 +1,14 @@
 {
-  "title": "ReBranding AI Generated Logos",
-  "slug": "rebranding-ai-generated-logos",
-  "date": "",
-  "order": 1,
-  "description": "AI can generate an image, but it can’t build a brand. This project shows how I took generic AI outputs and turned them into original, vibe-heavy identities.",
-  "category": {
-    "label": "Graphic Design",
-    "value": "graphic-design"
-  },
-  "featuredImage": "/assets/uploads/redesign.png",
+  "body": "<!--StartFragment-->\n\n**The Goal:** I wanted to prove that a designer’s eye is better than an algorithm. AI logos often look \"nice\" at first glance, but they are usually cluttered, hard to read, and lack a real connection to the industry they represent.<!----> I took two AI concepts and rebuilt them from scratch to give them **personality, scalability, and a clear identity.**\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n- - -\n\n#### **01. KinMade: From \"Bland Boutique\" to \"Magical Maker\"**\n\n* **The Problem:** The old AI logo felt like a generic corporate template. It was a bit \"cold\" and didn't really say anything about kids or creativity.\n* **The Fix:** I wanted a **whimsical, magical vibe.** * **The Identity:** I chose a \"Magical Purple\" that works for everyone (gender-neutral) and switched to a chunky, friendly font that feels safe and fun.\n\n  * **The Clever:** I stacked the name \"Kin-Made\" to help with pronunciation and arranged the star clusters to subtly hint at a **T-shirt shape.** It’s not just a logo anymore; it’s a story about making magic.\n\n#### **02. Paw-sitive Prints: From \"Messy Sticker\" to \"Pro 3D Maker\"**\n\n* **The Problem:** The AI original was a mess. It had too much detail (the realistic 3D printer) and \"wobbly\" shapes that would look terrible if you printed them small. It felt like a clip-art sticker, not a business.\n* **The Fix:** I stripped it down to a **clean, professional flat design.**\n\n  * **The Vibe:** I used a \"Rainbow Filament\" color palette. If you’re into 3D printing, you recognize those colors immediately. It gives the brand instant **authenticity.**\n  * **The Identity:** The layered paw print represents the \"slices\" of a 3D print. It’s simple, bold, and tells you exactly what the business does without being cluttered.\n\n- - -\n\n**Summary:** AI is a starting point, but the **originality** comes from the human choices—the colors that mean something, the hidden shapes, and the font that actually fits the vibe.\n\n<!--EndFragment-->",
   "keywords": [
     "logo",
     "rebranding",
     "canva"
   ],
-  "highlightBox": {
-    "style": "info",
-    "title": "Project Snapshot",
-    "body": "AI can generate an image, but it can’t build a brand. This project shows how I took generic AI outputs and turned them into original, vibe-heavy identities."
-  },
   "actionButtons": [],
+  "slug": "rebranding-ai-generated-logos",
+  "featuredImage": "/assets/uploads/redesign.png",
   "mediaGallery": [
-    {
-      "type": "image",
-      "image": "/assets/uploads/redesign.png",
-      "video": "",
-      "posterImage": "",
-      "caption": "",
-      "altText": ""
-    },
     {
       "type": "image",
       "image": "/assets/uploads/kin-explain.png",
@@ -46,5 +26,17 @@
       "altText": ""
     }
   ],
-  "body": "<!--StartFragment-->\n\n**The Goal:** I wanted to prove that a designer’s eye is better than an algorithm. AI logos often look \"nice\" at first glance, but they are usually cluttered, hard to read, and lack a real connection to the industry they represent.<!----> I took two AI concepts and rebuilt them from scratch to give them **personality, scalability, and a clear identity.**\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n<!---->\n\n- - -\n\n#### **01. KinMade: From \"Bland Boutique\" to \"Magical Maker\"**\n\n* **The Problem:** The old AI logo felt like a generic corporate template. It was a bit \"cold\" and didn't really say anything about kids or creativity.\n* **The Fix:** I wanted a **whimsical, magical vibe.** * **The Identity:** I chose a \"Magical Purple\" that works for everyone (gender-neutral) and switched to a chunky, friendly font that feels safe and fun.\n\n  * **The Clever:** I stacked the name \"Kin-Made\" to help with pronunciation and arranged the star clusters to subtly hint at a **T-shirt shape.** It’s not just a logo anymore; it’s a story about making magic.\n\n#### **02. Paw-sitive Prints: From \"Messy Sticker\" to \"Pro 3D Maker\"**\n\n* **The Problem:** The AI original was a mess. It had too much detail (the realistic 3D printer) and \"wobbly\" shapes that would look terrible if you printed them small. It felt like a clip-art sticker, not a business.\n* **The Fix:** I stripped it down to a **clean, professional flat design.**\n\n  * **The Vibe:** I used a \"Rainbow Filament\" color palette. If you’re into 3D printing, you recognize those colors immediately. It gives the brand instant **authenticity.**\n  * **The Identity:** The layered paw print represents the \"slices\" of a 3D print. It’s simple, bold, and tells you exactly what the business does without being cluttered.\n\n- - -\n\n**Summary:** AI is a starting point, but the **originality** comes from the human choices—the colors that mean something, the hidden shapes, and the font that actually fits the vibe.\n\n<!--EndFragment-->"
+  "order": 1,
+  "date": "",
+  "highlightBox": {
+    "style": "info",
+    "title": "Project Snapshot",
+    "body": "AI can generate an image, but it can’t build a brand. This project shows how I took generic AI outputs and turned them into original, vibe-heavy identities."
+  },
+  "title": "ReBranding AI Generated Logos",
+  "description": "AI can generate an image, but it can’t build a brand. This project shows how I took generic AI outputs and turned them into original, vibe-heavy identities.",
+  "category": {
+    "label": "Graphic Design",
+    "value": "graphic-design"
+  }
 }
