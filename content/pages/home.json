@@ -1,16 +1,15 @@
-﻿{
-  "hero": {
-    "title": "DESIGNER",
-    "subtitle": "& DEVELOPER",
-    "eyebrow": "Kyle De Vares",
-    "backgroundType": "pattern",
-    "background": "#CAFF00",
-    "accent": "volt",
-    "heroImage": "/assets/uploads/gemini_generated_image_7mhk0l7mhk0l7mhk.png"
-  },
+{
+  "heroDescription": "Multidisciplinary digital designer blending branding, illustration, web design, and creative technology into bold visual experiences.",
   "heroName": "Kyle De Vares",
-  "heroDescription": "Creative digital artist blending branding, illustration, web experiments, and queer punk visual storytelling.",
-  "heroEyebrow": "Creative Digital Artist",
+  "contactSection": {
+    "headline": "Got a vision?",
+    "ctaLabel": "Let's Talk"
+  },
+  "featuredProjectIds": [],
+  "journalSection": {
+    "title": "Latest Thoughts",
+    "ctaLabel": "All Posts"
+  },
   "marqueeText": [
     "Branding",
     "Illustration",
@@ -20,7 +19,39 @@
     "Commissions",
     "Community"
   ],
-  "featuredProjectIds": [],
+  "heroEyebrow": "Creative Designer & Developer",
+  "whatIDo": [
+    {
+      "label": "Brand Identity",
+      "description": "Creating logos, visual systems, and branding that help businesses, communities, and creative projects stand out with a strong and memorable identity. I focus on combining style, personality, and clear visual communication to build branding that feels unique and recognisable."
+    },
+    {
+      "label": "Graphic Design",
+      "description": "Designing digital and print visuals including posters, merchandise, promotional graphics, social media content, and marketing materials. My work combines bold layouts, typography, and creative direction to create visuals that are both eye-catching and effective."
+    },
+    {
+      "label": "Digital Illustration",
+      "description": "Producing custom illustrations and digital artwork inspired by storytelling, character design, alternative aesthetics, and expressive visual styles. My illustration work ranges from personal creative projects to commission-based artwork and promotional visuals."
+    },
+    {
+      "label": "Community & Digital Projects",
+      "description": "Developing creative projects that support online communities, collaborative spaces, and digital experiences. This includes design-led tools, Discord community concepts, branding support, and experimental ideas that blend creativity with technology."
+    },
+    {
+      "label": "Visual Storytelling",
+      "description": "Combining design, imagery, layout, and narrative to create visuals that communicate emotion, personality, and ideas. I aim to create work that feels engaging, memorable, and connected to the audience through strong visual storytelling."
+    },
+    {
+      "label": "Creative Coding",
+      "description": "Using HTML, CSS, JavaScript, and digital tools to experiment with interactive ideas, creative projects, and online experiences. I enjoy combining technical problem-solving with creativity to build projects that are both functional and visually engaging."
+    }
+  ],
+  "featuredSection": {
+    "title": "Featured Work",
+    "description": "A selection of recent projects showcasing digital art, web development, and creative problem-solving.",
+    "ctaLabel": "View All Projects",
+    "ctaLink": "/portfolio"
+  },
   "aboutSection": {
     "title": "Design, Code, And Loud Visuals.",
     "image": "/assets/uploads/bw-headshot-photo.jpg",
@@ -40,44 +71,13 @@
       }
     ]
   },
-  "featuredSection": {
-    "title": "Featured Work",
-    "description": "A selection of recent projects showcasing digital art, web development, and creative problem-solving.",
-    "ctaLabel": "View All Projects",
-    "ctaLink": "/portfolio"
-  },
-  "whatIDo": [
-    {
-      "label": "Digital Art",
-      "description": "Creating bold visual artwork with digital tools and techniques"
-    },
-    {
-      "label": "Brand Identity",
-      "description": "Building cohesive brand systems that tell your story"
-    },
-    {
-      "label": "Web Experiments",
-      "description": "Pushing the boundaries of web design and interactivity"
-    },
-    {
-      "label": "Illustration",
-      "description": "Custom illustrations for any medium or purpose"
-    },
-    {
-      "label": "Community Tools",
-      "description": "Building digital spaces that bring people together"
-    },
-    {
-      "label": "Visual Storytelling",
-      "description": "Crafting narratives through visual design and composition"
-    }
-  ],
-  "contactSection": {
-    "headline": "Got a vision?",
-    "ctaLabel": "Let's Talk"
-  },
-  "journalSection": {
-    "title": "Latest Thoughts",
-    "ctaLabel": "All Posts"
+  "hero": {
+    "title": "DESIGNER",
+    "subtitle": "& DEVELOPER",
+    "eyebrow": "Kyle De Vares",
+    "backgroundType": "pattern",
+    "background": "#CAFF00",
+    "accent": "volt",
+    "heroImage": "/assets/uploads/gemini_generated_image_7mhk0l7mhk0l7mhk.png"
   }
 }
