@@ -129,6 +129,18 @@ export function cleanText(value = "") {
     .trim();
 }
 
+export function cleanMarkdownText(value = "") {
+  return value
+    .replace(/<!--StartFragment-->|<!--EndFragment-->/g, "")
+    .replace(/\u00e2\u20ac[\u201d\u201c\u2013]|[\u2013\u2014]/g, "-")
+    .replace(/\u00e2\u20ac\u2122|\u2019/g, "'")
+    .replace(/\u00e2\u20ac[\u0153\ufffd]|\u201c|\u201d/g, '"')
+    .replace(/\u00c2\u00a3/g, "GBP ")
+    .replace(/&amp;/g, "&")
+    .replace(/[\u0080-\uFFFF]/g, "")
+    .trim();
+}
+
 export function stripMarkdown(value = "") {
   return cleanText(value)
     .replace(/\*\*/g, "")
@@ -138,7 +150,7 @@ export function stripMarkdown(value = "") {
 }
 
 export function renderMarkdown(value = "") {
-  const cleaned = cleanText(value);
+  const cleaned = cleanMarkdownText(value);
   return marked.parse(cleaned, { async: false }) as string;
 }
 
