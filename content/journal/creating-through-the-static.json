@@ -3,6 +3,14 @@
     {
       "type": "image",
       "image": "public/assets/uploads/reject-me-copy.jpg"
+    },
+    {
+      "type": "image",
+      "image": "public/assets/uploads/doom-scrolling.jpg"
+    },
+    {
+      "type": "image",
+      "image": "public/assets/uploads/hellheal-black.jpg"
     }
   ],
   "date": "2026-05-24",
