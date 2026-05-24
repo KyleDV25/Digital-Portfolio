@@ -2,20 +2,20 @@
   "mediaGallery": [
     {
       "type": "image",
-      "image": "public/assets/uploads/reject-me-copy.jpg"
+      "image": "reject-me-copy.jpg"
     },
     {
       "type": "image",
-      "image": "public/assets/uploads/doom-scrolling.jpg"
+      "image": "doom-scrolling.jpg"
     },
     {
       "type": "image",
-      "image": "public/assets/uploads/hellheal-black.jpg"
+      "image": "hellheal-black.jpg"
     }
   ],
   "date": "2026-05-24",
   "title": "Creating Through The Static",
-  "featuredImage": "",
+  "featuredImage": "/assets/uploads/hellheal-black.jpg",
   "tags": [
     "Mental Health",
     "Creativity",
