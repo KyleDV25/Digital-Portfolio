@@ -1,14 +1,5 @@
 {
-  "title": "Outcast – Unity Game Prototype",
-  "slug": "outcast-unity-game-prototype",
-  "date": "",
-  "order": 3,
-  "description": "A Unity game test run showcasing core gameplay functionality and character animation for an original concept inspired by superpowered survival narratives.",
-  "category": {
-    "label": "Coding",
-    "value": "coding"
-  },
-  "featuredImage": "/assets/uploads/capture4.png",
+  "body": "While studying Level 3 Creative Media, I created a test run for an original game concept titled Outcast. The aim of this project was to prove that the core idea, mechanics, and visual style could work in an interactive format rather than producing a fully finished game.\n\nThe prototype was built using the Unity Engine, where I focused on character movement, animation, and overall functionality. I manually created the character’s running animation by downloading and assembling frames frame-by-frame, then implemented them into Unity to produce a smooth running cycle during gameplay. This allowed me to demonstrate an understanding of sprite animation, timing, and engine integration.\n\nThe concept behind Outcast centres around a group of people born with powers who are forced to live on the run in order to survive. The narrative draws inspiration from titles such as X-Men and inFAMOUS: Second Son, exploring themes of fear, identity, and survival in a hostile world. Although only a short gameplay clip exists, it clearly demonstrates that the mechanics function as intended and that the core idea is viable for further development.\n\nThis project highlights my ability to take an original narrative idea, translate it into gameplay, and test it through a working prototype using industry-standard tools.",
   "keywords": [
     "Unity engine",
     "game prototype",
@@ -17,12 +8,9 @@
     "creative media",
     "gameplay testing"
   ],
-  "highlightBox": {
-    "style": "info",
-    "title": "Project Snapshot",
-    "body": "A Unity game test run showcasing core gameplay functionality and character animation for an original concept inspired by superpowered survival narratives."
-  },
   "actionButtons": [],
+  "slug": "outcast-unity-game-prototype",
+  "featuredImage": "/assets/uploads/capture4.png",
   "mediaGallery": [
     {
       "type": "image",
@@ -57,5 +45,17 @@
       "altText": ""
     }
   ],
-  "body": "While studying Level 3 Creative Media, I created a test run for an original game concept titled Outcast. The aim of this project was to prove that the core idea, mechanics, and visual style could work in an interactive format rather than producing a fully finished game.\n\nThe prototype was built using the Unity Engine, where I focused on character movement, animation, and overall functionality. I manually created the character’s running animation by downloading and assembling frames frame-by-frame, then implemented them into Unity to produce a smooth running cycle during gameplay. This allowed me to demonstrate an understanding of sprite animation, timing, and engine integration.\n\nThe concept behind Outcast centres around a group of people born with powers who are forced to live on the run in order to survive. The narrative draws inspiration from titles such as X-Men and inFAMOUS: Second Son, exploring themes of fear, identity, and survival in a hostile world. Although only a short gameplay clip exists, it clearly demonstrates that the mechanics function as intended and that the core idea is viable for further development.\n\nThis project highlights my ability to take an original narrative idea, translate it into gameplay, and test it through a working prototype using industry-standard tools."
+  "order": 3,
+  "date": "2020-05-12",
+  "highlightBox": {
+    "style": "info",
+    "title": "Project Snapshot",
+    "body": "A Unity game test run showcasing core gameplay functionality and character animation for an original concept inspired by superpowered survival narratives."
+  },
+  "title": "Outcast – Unity Game Prototype",
+  "description": "A Unity game test run showcasing core gameplay functionality and character animation for an original concept inspired by superpowered survival narratives.",
+  "category": {
+    "label": "Coding",
+    "value": "coding"
+  }
 }
