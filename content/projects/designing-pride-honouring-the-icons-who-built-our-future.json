@@ -1,14 +1,5 @@
 {
-  "title": "Designing Pride: Honouring the Icons Who Built Our Future",
-  "slug": "designing-pride-honouring-the-icons-who-built-our-future",
-  "date": "",
-  "order": 2,
-  "description": "A retro-inspired Pride Month poster series celebrating two pivotal LGBTQ+ icons through bold typography, stylised portrait illustration, and expressive colour storytelling.",
-  "category": {
-    "label": "Graphic Design",
-    "value": "graphic-design"
-  },
-  "featuredImage": "/assets/uploads/green-and-white-retro-illustrative-typography-coffee-poster.png",
+  "body": "<!--StartFragment-->\n\nThis Pride Month poster series honours **Freddie Mercury** and **Marsha P. Johnson**, two figures whose visibility, artistry, and activism helped shape the foundation of modern LGBTQ+ rights and representation.\n\nThe project blends retro typography with contemporary digital illustration techniques to create bold, emotionally resonant compositions. Each poster explores a distinct visual approach:\n\n* The Freddie Mercury piece leans into playful, character-driven illustration with vibrant tones and musical motifs to reflect his legendary stage presence and cultural impact.\n* The Marsha P. Johnson design incorporates textured overlays, floral symbolism, and experimental type placement to reflect softness, resistance, and historical depth.\n\nThroughout the series, I focused on hierarchy, colour balance, type pairing, and compositional framing to ensure both aesthetic strength and narrative clarity. The work demonstrates my ability to merge graphic design principles with illustrative storytelling, creating visually engaging pieces that also carry cultural and historical meaning.\n\nThis series reflects both my technical design capabilities and my commitment to honouring queer pioneers whose influence continues to shape the creative and social landscape today.\n\n<!--EndFragment-->",
   "keywords": [
     "Graphic Design",
     "Digital Illustration",
@@ -16,12 +7,9 @@
     "Retro Design",
     "Visual Storytelling"
   ],
-  "highlightBox": {
-    "style": "info",
-    "title": "Project Snapshot",
-    "body": "A retro-inspired Pride Month poster series celebrating two pivotal LGBTQ+ icons through bold typography, stylised portrait illustration, and expressive colour storytelling."
-  },
   "actionButtons": [],
+  "slug": "designing-pride-honouring-the-icons-who-built-our-future",
+  "featuredImage": "/assets/uploads/green-and-white-retro-illustrative-typography-coffee-poster.png",
   "mediaGallery": [
     {
       "type": "image",
@@ -40,5 +28,17 @@
       "altText": ""
     }
   ],
-  "body": "<!--StartFragment-->\n\nThis Pride Month poster series honours **Freddie Mercury** and **Marsha P. Johnson**, two figures whose visibility, artistry, and activism helped shape the foundation of modern LGBTQ+ rights and representation.\n\nThe project blends retro typography with contemporary digital illustration techniques to create bold, emotionally resonant compositions. Each poster explores a distinct visual approach:\n\n* The Freddie Mercury piece leans into playful, character-driven illustration with vibrant tones and musical motifs to reflect his legendary stage presence and cultural impact.\n* The Marsha P. Johnson design incorporates textured overlays, floral symbolism, and experimental type placement to reflect softness, resistance, and historical depth.\n\nThroughout the series, I focused on hierarchy, colour balance, type pairing, and compositional framing to ensure both aesthetic strength and narrative clarity. The work demonstrates my ability to merge graphic design principles with illustrative storytelling, creating visually engaging pieces that also carry cultural and historical meaning.\n\nThis series reflects both my technical design capabilities and my commitment to honouring queer pioneers whose influence continues to shape the creative and social landscape today.\n\n<!--EndFragment-->"
+  "order": 2,
+  "date": "2025-06-11",
+  "highlightBox": {
+    "style": "info",
+    "title": "Project Snapshot",
+    "body": "A retro-inspired Pride Month poster series celebrating two pivotal LGBTQ+ icons through bold typography, stylised portrait illustration, and expressive colour storytelling."
+  },
+  "title": "Designing Pride: Honouring the Icons Who Built Our Future",
+  "description": "A retro-inspired Pride Month poster series celebrating two pivotal LGBTQ+ icons through bold typography, stylised portrait illustration, and expressive colour storytelling.",
+  "category": {
+    "label": "Graphic Design",
+    "value": "graphic-design"
+  }
 }
