@@ -263,10 +263,13 @@ export function getProjects(): Project[] {
   return readCollection<Project>("content/projects")
     .filter((project) => project.title && project.slug)
     .sort((a, b) => {
+      // Primary sort: date descending (newest first)
+      const dateCompare = (b.date || "").localeCompare(a.date || "");
+      if (dateCompare !== 0) return dateCompare;
+      // Secondary sort: explicit order values
       const orderA = a.order ?? 999;
       const orderB = b.order ?? 999;
-      if (orderA !== orderB) return orderA - orderB;
-      return (b.date || "").localeCompare(a.date || "");
+      return orderA - orderB;
     });
 }
 
